@@ -1,4 +1,4 @@
-import { _decorator, director, Component, ProgressBar } from 'cc';
+import { _decorator, director, find, Component, ProgressBar, AudioSource } from 'cc';
 import { GlobalValues } from './GlobalValues';
 const { ccclass, property } = _decorator;
 
@@ -25,6 +25,8 @@ export class HelthManager extends Component {
             }
             else {
                 GlobalValues.GameIsOver = true;
+                const MusicManager = find('Music_Manager');
+                MusicManager.getComponent(AudioSource).stop();
                 director.loadScene('End');
             }
         }
