@@ -1,4 +1,4 @@
-import { _decorator, AudioSource, Component, find, Sprite } from 'cc';
+import { _decorator, find, Component, AudioSource, Sprite, Toggle } from 'cc';
 import { GlobalValues } from './GlobalValues';
 const { ccclass, property } = _decorator;
 
@@ -10,6 +10,9 @@ export class SettingsManager extends Component {
 
     @property(Sprite)
     private MusicButton: Sprite;
+
+    @property(Toggle)
+    private SkinToggle: Toggle;
 
     protected start(): void {
         this.onLoadSettings();
@@ -28,6 +31,13 @@ export class SettingsManager extends Component {
         }
         else {
             this.MusicButton.grayscale = false;
+        }
+
+        if (GlobalValues.SkinsIsSaved == false) {
+            this.SkinToggle.isChecked = false;
+        }
+        else {
+            this.SkinToggle.isChecked = true;
         }
     }
 
@@ -53,6 +63,15 @@ export class SettingsManager extends Component {
             MusicManager.getComponent(AudioSource).play();
             GlobalValues.MusicIsActivated = true;
             this.MusicButton.grayscale = false;
+        }
+    }
+
+    onClickToggle() {
+        if (this.SkinToggle.isChecked == false) {
+            GlobalValues.SkinsIsSaved = true;
+        }
+        else {
+            GlobalValues.SkinsIsSaved = false;
         }
     }
 }
