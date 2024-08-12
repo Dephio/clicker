@@ -2,8 +2,8 @@ import { _decorator, Component, Sprite } from 'cc';
 import { GlobalValues } from './GlobalValues';
 const { ccclass, property } = _decorator;
 
-@ccclass('StarLoader')
-export class StarLoader extends Component {
+@ccclass('LevelLoader')
+export class LevelLoader extends Component {
 
     @property(Sprite)
     private Star_Icon_1: Sprite;

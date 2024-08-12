@@ -7,7 +7,7 @@ export class GlobalValues extends Component {
     static LifeTime: number = 30;
     static BonusTime: number = 30;
     static PageNumber: number = 3;
-    static MoneyCount: number = 0;
+    static MoneyCount: number = 990;
     static BonusPoints: number = 1;
     static HealthPoints: number = 1;
     static PlayersLevel: number = 1;
@@ -18,6 +18,7 @@ export class GlobalValues extends Component {
     static GameIsPaused: boolean = false;
     static BonusIsSpawned: boolean = false;
     static MusicIsPlaying: boolean = false;
+    static LevelIsReceived: boolean = false;
     static BonusIsActivated: boolean = false;
     static BuySoundIsPlaying: boolean = false;
 
@@ -42,6 +43,7 @@ export class GlobalValues extends Component {
         this.GameIsPaused = false;
         this.BonusIsSpawned = false;
         this.MusicIsPlaying = false;
+        this.LevelIsReceived = false;
         this.BonusIsActivated = false;
         this.BuySoundIsPlaying = false;
 

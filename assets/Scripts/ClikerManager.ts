@@ -12,7 +12,7 @@ export class ClikerManager extends Component {
         this.MoneyLabel.string = GlobalValues.MoneyCount.toString();
     }
 
-    clickAdd() {
+    onClickPlayer() {
         if (GlobalValues.GameIsPaused == false && GlobalValues.GameIsOver == false) {
             if (GlobalValues.MoneyCount < 9999999) {
                 if ((GlobalValues.MoneyCount + GlobalValues.MoneyForClick) >= 9999999) {

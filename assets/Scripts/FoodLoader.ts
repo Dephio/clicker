@@ -2,8 +2,8 @@ import { _decorator, Button, Component, Sprite } from 'cc';
 import { GlobalValues } from './GlobalValues';
 const { ccclass, property} = _decorator;
 
-@ccclass('ProductLoader')
-export class ProductLoader extends Component {
+@ccclass('FoodLoader')
+export class FoodLoader extends Component {
 
     @property(Button)
     private Button_1: Button;

@@ -2,8 +2,8 @@ import { _decorator, Component } from 'cc';
 import { GlobalValues } from './GlobalValues';
 const { ccclass } = _decorator;
 
-@ccclass('ShopManager')
-export class ShopManager extends Component {
+@ccclass('FoodManager')
+export class FoodManager extends Component {
 
     onClickButton1() {
         switch (GlobalValues.PlayersLevel) {
