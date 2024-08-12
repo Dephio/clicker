@@ -7,7 +7,7 @@ export class GlobalValues extends Component {
     static LifeTime: number = 30;
     static BonusTime: number = 30;
     static PageNumber: number = 3;
-    static MoneyCount: number = 990;
+    static MoneyCount: number = 0;
     static BonusPoints: number = 1;
     static HealthPoints: number = 1;
     static PlayersLevel: number = 1;
