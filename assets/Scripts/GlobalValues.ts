@@ -13,12 +13,15 @@ export class GlobalValues extends Component {
     static PlayersLevel: number = 1;
     static MoneyForClick: number = 1;
     static BonusNumber: number = null;
+    static LevelUpdate: boolean = null;
     static GameIsOver: boolean = false;
     static GameIsPaused: boolean = false;
     static BonusIsSpawned: boolean = false;
     static MusicIsPlaying: boolean = false;
     static BonusIsActivated: boolean = false;
+    static BuySoundIsPlaying: boolean = false;
 
+    static SkinNumber: number = 1;
     static DiamondCount: number = 0;
     static SkinsIsSaved: boolean = false;
     static SoundIsActivated: boolean = true;
@@ -34,12 +37,15 @@ export class GlobalValues extends Component {
         this.PlayersLevel = 1;
         this.MoneyForClick = 1;
         this.BonusNumber = null;
+        this.LevelUpdate = null;
         this.GameIsOver = false;
         this.GameIsPaused = false;
         this.BonusIsSpawned = false;
         this.MusicIsPlaying = false;
         this.BonusIsActivated = false;
+        this.BuySoundIsPlaying = false;
 
+        //this.SkinNumber = 1;
         //this.DiamondCount = 0;
         //this.SkinsIsSaved = false;
         //this.SoundIsActivated = true;

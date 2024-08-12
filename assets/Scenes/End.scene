@@ -731,7 +731,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Ending_Music",
+    "_name": "Sound_Manager",
     "_objFlags": 512,
     "__editorExtras__": {},
     "_parent": {
@@ -796,6 +796,18 @@
     },
     "ClickerSound": {
       "__uuid__": "695c7513-f415-4642-81e1-408e87c3aa4a",
+      "__expectedType__": "cc.AudioClip"
+    },
+    "BuySound": {
+      "__uuid__": "eca65eac-c4a3-4807-9e2c-f37de8fd6de9",
+      "__expectedType__": "cc.AudioClip"
+    },
+    "LevelUpSound": {
+      "__uuid__": "1d50a39a-90a6-48e4-8cef-4333c55f8f09",
+      "__expectedType__": "cc.AudioClip"
+    },
+    "LevelDownSound": {
+      "__uuid__": "7fec6545-7ebe-4026-b965-7a93a66b9ce6",
       "__expectedType__": "cc.AudioClip"
     },
     "_id": "b9SoHYzkFOtaPmxaRTeJzi"

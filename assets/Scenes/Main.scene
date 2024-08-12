@@ -652,8 +652,16 @@
       "__uuid__": "695c7513-f415-4642-81e1-408e87c3aa4a",
       "__expectedType__": "cc.AudioClip"
     },
-    "BackgroundMusic": {
-      "__uuid__": "e60f4de0-8cdc-43d1-a5e2-fef178ab95d3",
+    "BuySound": {
+      "__uuid__": "eca65eac-c4a3-4807-9e2c-f37de8fd6de9",
+      "__expectedType__": "cc.AudioClip"
+    },
+    "LevelUpSound": {
+      "__uuid__": "1d50a39a-90a6-48e4-8cef-4333c55f8f09",
+      "__expectedType__": "cc.AudioClip"
+    },
+    "LevelDownSound": {
+      "__uuid__": "7fec6545-7ebe-4026-b965-7a93a66b9ce6",
       "__expectedType__": "cc.AudioClip"
     },
     "_id": "47Voxzbu5Gk4f/4QClYAuD"
@@ -3028,7 +3036,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0,
+      "x": 0.5,
       "y": -65,
       "z": 0
     },
