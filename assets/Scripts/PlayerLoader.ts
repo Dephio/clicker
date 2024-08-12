@@ -9,9 +9,6 @@ export class PlayerLoader extends Component {
     private Player_Sprite: Sprite;
 
     @property(SpriteFrame)
-    private Player_0: SpriteFrame;
-
-    @property(SpriteFrame)
     private Player_1: SpriteFrame;
 
     @property(SpriteFrame)
@@ -38,12 +35,11 @@ export class PlayerLoader extends Component {
     @property(SpriteFrame)
     private Player_9: SpriteFrame;
 
+    @property(SpriteFrame)
+    private Player_10: SpriteFrame;
+
     protected update(): void {
         switch (GlobalValues.SkinNumber) {
-            case 0:
-                this.Player_Sprite.spriteFrame = this.Player_0;
-                break;
-
             case 1:
                 this.Player_Sprite.spriteFrame = this.Player_1;
                 break;
@@ -78,6 +74,10 @@ export class PlayerLoader extends Component {
 
             case 9:
                 this.Player_Sprite.spriteFrame = this.Player_9;
+                break;
+
+            case 10:
+                this.Player_Sprite.spriteFrame = this.Player_10;
                 break;
         }
     }

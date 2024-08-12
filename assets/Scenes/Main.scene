@@ -2564,10 +2564,6 @@
     "Player_Sprite": {
       "__id__": 11
     },
-    "Player_0": {
-      "__uuid__": "513996f2-86b8-4c70-96a3-d19bf6e7417f@f9941",
-      "__expectedType__": "cc.SpriteFrame"
-    },
     "Player_1": {
       "__uuid__": "c67e4681-6b15-44bc-9f0d-96225f18a060@f9941",
       "__expectedType__": "cc.SpriteFrame"
@@ -2585,22 +2581,26 @@
       "__expectedType__": "cc.SpriteFrame"
     },
     "Player_5": {
-      "__uuid__": "0ea28aa6-043c-455b-b2d5-15c3d11b9c12@f9941",
+      "__uuid__": "513996f2-86b8-4c70-96a3-d19bf6e7417f@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "Player_6": {
-      "__uuid__": "8de48def-0071-4cf9-b45a-04d4a77943be@f9941",
+      "__uuid__": "0ea28aa6-043c-455b-b2d5-15c3d11b9c12@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "Player_7": {
-      "__uuid__": "81931005-e442-4204-b161-f603779e1f58@f9941",
+      "__uuid__": "8de48def-0071-4cf9-b45a-04d4a77943be@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "Player_8": {
-      "__uuid__": "67ece615-48af-4cf9-9be2-e7ecfae69291@f9941",
+      "__uuid__": "81931005-e442-4204-b161-f603779e1f58@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "Player_9": {
+      "__uuid__": "67ece615-48af-4cf9-9be2-e7ecfae69291@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    "Player_10": {
       "__uuid__": "2f6ea362-5bb2-46d2-bebf-2a544f2ff6c2@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },

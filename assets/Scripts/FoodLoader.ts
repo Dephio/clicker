@@ -42,7 +42,7 @@ export class FoodLoader extends Component {
     private Button_12: Button;
 
     protected update(): void {
-        switch (GlobalValues.PlayersLevel) {
+        switch (GlobalValues.PlayerLevel) {
             case 1:
                 this.Button_1.getComponent(Sprite).grayscale = false;
                 this.Button_2.getComponent(Sprite).grayscale = false;

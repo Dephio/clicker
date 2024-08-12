@@ -6,7 +6,7 @@ const { ccclass } = _decorator;
 export class FoodManager extends Component {
 
     onClickButton1() {
-        switch (GlobalValues.PlayersLevel) {
+        switch (GlobalValues.PlayerLevel) {
             case 1:
                 if (GlobalValues.MoneyCount >= 10 && GlobalValues.HealthPoints != 1) {
                     GlobalValues.MoneyCount -= 10;
@@ -54,7 +54,7 @@ export class FoodManager extends Component {
     }
 
     onClickButton2() {
-        switch (GlobalValues.PlayersLevel) {
+        switch (GlobalValues.PlayerLevel) {
             case 1:
                 if (GlobalValues.MoneyCount >= 50 && GlobalValues.HealthPoints != 1) {
                     GlobalValues.MoneyCount -= 50;
@@ -102,7 +102,7 @@ export class FoodManager extends Component {
     }
 
     onClickButton3() {
-        switch (GlobalValues.PlayersLevel) {
+        switch (GlobalValues.PlayerLevel) {
             case 1:
                 if (GlobalValues.MoneyCount >= 80 && GlobalValues.HealthPoints != 1) {
                     GlobalValues.MoneyCount -= 80;
@@ -150,7 +150,7 @@ export class FoodManager extends Component {
     }
 
     onClickButton4() {
-        switch (GlobalValues.PlayersLevel) {
+        switch (GlobalValues.PlayerLevel) {
             case 2:
                 if (GlobalValues.MoneyCount >= 80 && GlobalValues.HealthPoints != 1) {
                     GlobalValues.MoneyCount -= 80;
@@ -187,7 +187,7 @@ export class FoodManager extends Component {
     }
 
     onClickButton5() {
-        switch (GlobalValues.PlayersLevel) {
+        switch (GlobalValues.PlayerLevel) {
             case 2:
                 if (GlobalValues.MoneyCount >= 200 && GlobalValues.HealthPoints != 1) {
                     GlobalValues.MoneyCount -= 200;
@@ -224,7 +224,7 @@ export class FoodManager extends Component {
     }
 
     onClickButton6() {
-        switch (GlobalValues.PlayersLevel) {
+        switch (GlobalValues.PlayerLevel) {
             case 2:
                 if (GlobalValues.MoneyCount >= 300 && GlobalValues.HealthPoints != 1) {
                     GlobalValues.MoneyCount -= 300;
@@ -261,7 +261,7 @@ export class FoodManager extends Component {
     }
 
     onClickButton7() {
-        switch (GlobalValues.PlayersLevel) {
+        switch (GlobalValues.PlayerLevel) {
             case 3:
                 if (GlobalValues.MoneyCount >= 290 && GlobalValues.HealthPoints != 1) {
                     GlobalValues.MoneyCount -= 290;
@@ -287,7 +287,7 @@ export class FoodManager extends Component {
     }
 
     onClickButton8() {
-        switch (GlobalValues.PlayersLevel) {
+        switch (GlobalValues.PlayerLevel) {
             case 3:
                 if (GlobalValues.MoneyCount >= 1500 && GlobalValues.HealthPoints != 1) {
                     GlobalValues.MoneyCount -= 1500;
@@ -313,7 +313,7 @@ export class FoodManager extends Component {
     }
 
     onClickButton9() {
-        switch (GlobalValues.PlayersLevel) {
+        switch (GlobalValues.PlayerLevel) {
             case 3:
                 if (GlobalValues.MoneyCount >= 1800 && GlobalValues.HealthPoints != 1) {
                     GlobalValues.MoneyCount -= 1800;
@@ -339,7 +339,7 @@ export class FoodManager extends Component {
     }
 
     onClickButton10() {
-        switch (GlobalValues.PlayersLevel) {
+        switch (GlobalValues.PlayerLevel) {
             case 4:
                 if (GlobalValues.MoneyCount >= 800 && GlobalValues.HealthPoints != 1) {
                     GlobalValues.MoneyCount -= 800;
@@ -354,7 +354,7 @@ export class FoodManager extends Component {
     }
 
     onClickButton11() {
-        switch (GlobalValues.PlayersLevel) {
+        switch (GlobalValues.PlayerLevel) {
             case 4:
                 if (GlobalValues.MoneyCount >= 1800 && GlobalValues.HealthPoints != 1) {
                     GlobalValues.MoneyCount -= 1800;
@@ -369,7 +369,7 @@ export class FoodManager extends Component {
     }
 
     onClickButton12() {
-        switch (GlobalValues.PlayersLevel) {
+        switch (GlobalValues.PlayerLevel) {
             case 4:
                 if (GlobalValues.MoneyCount >= 2200 && GlobalValues.HealthPoints != 1) {
                     GlobalValues.MoneyCount -= 2200;

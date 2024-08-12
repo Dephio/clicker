@@ -21,7 +21,7 @@ export class BackgroundLoader extends Component {
     private Background_4: SpriteFrame;
 
     protected update(): void {
-        switch (GlobalValues.PlayersLevel) {
+        switch (GlobalValues.PlayerLevel) {
             case 1:
                 this.Background_Sprite.spriteFrame = this.Background_1;
                 break;
