@@ -7,7 +7,7 @@ export class GlobalValues extends Component {
     static LifeTime: number = 30;
     static BonusTime: number = 30;
     static PageNumber: number = 3;
-    static MoneyCount: number = 99990;
+    static MoneyCount: number = 0;
     static MoneyLevel: number = 0;
     static HealthLevel: number = 0;
     static BonusPoints: number = 1;
@@ -25,7 +25,7 @@ export class GlobalValues extends Component {
     static BuySoundIsPlaying: boolean = false;
 
     static SkinNumber: number = 1;
-    static DiamondCount: number = 99990;
+    static DiamondCount: number = 0;
     static SkinsIsSaved: boolean = false;
     static SoundIsActivated: boolean = true;
     static MusicIsActivated: boolean = true;
