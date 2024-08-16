@@ -15,6 +15,7 @@ export class LevelManager extends Component {
                 GlobalValues.PlayerLevel = 1;
                 GlobalValues.LifeTime = 30;
                 GlobalValues.MoneyForClick = 1;
+                this.updateLevelValues();
                 GlobalValues.LevelIsReceived = true;
                 if (GlobalValues.SkinsIsSaved != true || GlobalValues.SkinNumber < 5) {
                     GlobalValues.SkinNumber = 1;
@@ -34,6 +35,7 @@ export class LevelManager extends Component {
                 GlobalValues.PlayerLevel = 2;
                 GlobalValues.LifeTime = 45;
                 GlobalValues.MoneyForClick = 2;
+                this.updateLevelValues();
                 GlobalValues.LevelIsReceived = true;
                 if (GlobalValues.SkinsIsSaved != true || GlobalValues.SkinNumber < 5) {
                     GlobalValues.SkinNumber = 2;
@@ -53,6 +55,7 @@ export class LevelManager extends Component {
                 GlobalValues.PlayerLevel = 3;
                 GlobalValues.LifeTime = 60;
                 GlobalValues.MoneyForClick = 3;
+                this.updateLevelValues();
                 GlobalValues.LevelIsReceived = true;
                 if (GlobalValues.SkinsIsSaved != true || GlobalValues.SkinNumber < 5) {
                     GlobalValues.SkinNumber = 3;
@@ -68,11 +71,58 @@ export class LevelManager extends Component {
                 GlobalValues.PlayerLevel = 4;
                 GlobalValues.LifeTime = 75;
                 GlobalValues.MoneyForClick = 4;
+                this.updateLevelValues();
                 GlobalValues.LevelIsReceived = true;
                 if (GlobalValues.SkinsIsSaved != true || GlobalValues.SkinNumber < 5) {
                     GlobalValues.SkinNumber = 4;
                 }
             }
+        }
+    }
+
+    updateLevelValues() {
+        switch (GlobalValues.HealthLevel) {
+            case 0:
+                GlobalValues.LifeTime += 0;
+                break;
+
+            case 1:
+                GlobalValues.LifeTime += 11.25;
+                break;
+
+            case 2:
+                GlobalValues.LifeTime += 22.5;
+                break;
+
+            case 3:
+                GlobalValues.LifeTime += 33.75;
+                break;
+
+            case 4:
+                GlobalValues.LifeTime += 45;
+                break;
+        }
+
+        switch (GlobalValues.MoneyLevel) {
+            case 0:
+                GlobalValues.MoneyForClick += 0;
+                break;
+
+            case 1:
+                GlobalValues.MoneyForClick += 1;
+                break;
+
+            case 2:
+                GlobalValues.MoneyForClick += 2;
+                break;
+
+            case 3:
+                GlobalValues.MoneyForClick += 3;
+                break;
+
+            case 4:
+                GlobalValues.MoneyForClick += 4;
+                break;
         }
     }
 }

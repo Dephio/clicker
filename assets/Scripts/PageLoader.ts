@@ -31,6 +31,9 @@ export class PageLoader extends Component {
 
     protected start(): void {
         this.onLoadPage();
+    }
+
+    protected update(): void {
         this.Diamond_Label.string = GlobalValues.DiamondCount.toString();
     }
 
