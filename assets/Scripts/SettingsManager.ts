@@ -1,4 +1,4 @@
-import { _decorator, find, Component, AudioSource, Sprite, Toggle } from 'cc';
+import { _decorator, find, Component, AudioSource, Sprite, Toggle, Node, SpriteFrame } from 'cc';
 import { GlobalValues } from './GlobalValues';
 const { ccclass, property } = _decorator;
 
@@ -11,8 +11,23 @@ export class SettingsManager extends Component {
     @property(Sprite)
     private MusicButton: Sprite;
 
+    @property(Sprite)
+    private LanguageButton: Sprite;
+
+    @property(SpriteFrame)
+    private LanguageRU: SpriteFrame;
+    
+    @property(SpriteFrame)
+    private LanguageEN: SpriteFrame;
+
     @property(Toggle)
     private SkinToggle: Toggle;
+
+    @property(Node)
+    private MenuPage: Node;
+
+    @property(Node)
+    private InfoPage: Node;
 
     protected start(): void {
         this.onLoadSettings();
@@ -66,6 +81,17 @@ export class SettingsManager extends Component {
         }
     }
 
+    onClickInfo() {
+        if (this.InfoPage.active == false) {
+            this.MenuPage.active = false;
+            this.InfoPage.active = true;
+        }
+        else {
+            this.MenuPage.active = true;
+            this.InfoPage.active = false;
+        }
+    }
+
     onClickToggle() {
         if (this.SkinToggle.isChecked == false) {
             GlobalValues.SkinsIsSaved = true;
@@ -73,5 +99,9 @@ export class SettingsManager extends Component {
         else {
             GlobalValues.SkinsIsSaved = false;
         }
+    }
+
+    onClickLanguage() {
+        // Здесь будет скрипт, отвечающий за смену языка
     }
 }
