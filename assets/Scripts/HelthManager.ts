@@ -25,6 +25,7 @@ export class HelthManager extends Component {
             }
             else {
                 GlobalValues.GameIsOver = true;
+                GlobalValues.AdvIsShow = false;
                 const MusicManager = find('Music_Manager');
                 MusicManager.getComponent(AudioSource).stop();
                 director.loadScene('End');

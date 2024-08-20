@@ -16,6 +16,7 @@ export class GlobalValues extends Component {
     static MoneyForClick: number = 1;
     static BonusNumber: number = null;
     static LevelUpdate: boolean = null;
+    static AdvIsShow: boolean = false;
     static GameIsOver: boolean = false;
     static GameIsPaused: boolean = false;
     static BonusIsSpawned: boolean = false;
@@ -49,6 +50,7 @@ export class GlobalValues extends Component {
         this.MoneyForClick = 1;
         this.BonusNumber = null;
         this.LevelUpdate = null;
+        this.AdvIsShow = false;
         this.GameIsOver = false;
         this.GameIsPaused = false;
         this.BonusIsSpawned = false;
