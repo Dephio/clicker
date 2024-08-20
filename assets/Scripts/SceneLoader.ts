@@ -6,9 +6,19 @@ const { ccclass } = _decorator;
 @ccclass('SceneLoader')
 export class SceneLoader extends Component {
 
-    protected start(): void {
-        if (GlobalValues.AdvIsShow == false) {
-            ysdk.adv.showFullscreenAdv();
+    protected onLoad(): void {
+        const callbacks = {
+            onClose: () => {
+                YaGames.init()
+                    .then((ysdk) => {
+                        ysdk.features.LoadingAPI?.ready()
+                    })
+                    .catch(console.error);
+                GlobalValues.AdvIsShow = true;
+            }
+          };
+        if (GlobalValues.AdvIsShow == false && GlobalValues.GameIsOver == false) {
+            ysdk.adv.showFullscreenAdv({ callbacks });
         }
     }
 
@@ -32,6 +42,10 @@ export class SceneLoader extends Component {
           };
         if (GlobalValues.AdvIsShow == false) {
             ysdk.adv.showFullscreenAdv({ callbacks });
+        }
+        else {
+            GlobalValues.resetValues();
+            director.loadScene('Main');
         }
     }
 
