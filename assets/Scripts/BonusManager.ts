@@ -66,10 +66,11 @@ export class BonusManager extends Component {
           onRewarded: this.getBonusMoney.bind(this),
         };
 
-        const MusicManager = find("Music_Manager");
-        MusicManager.getComponent(AudioSource).pause();
+        if (GlobalValues.MusicIsActivated == true) {
+            const MusicManager = find("Music_Manager");
+            MusicManager.getComponent(AudioSource).pause();
+        }
         GlobalValues.GameIsPaused = true;
-
         ysdk.adv.showRewardedVideo({ callbacks });
       }
 
@@ -77,21 +78,24 @@ export class BonusManager extends Component {
         const callbacks = {
           onRewarded: this.getBonusDiamond.bind(this),
         };
-        
-        const MusicManager = find("Music_Manager");
-        MusicManager.getComponent(AudioSource).pause();
-        GlobalValues.GameIsPaused = true;
 
+        if (GlobalValues.MusicIsActivated == true) {
+            const MusicManager = find("Music_Manager");
+            MusicManager.getComponent(AudioSource).pause();
+        }
+        GlobalValues.GameIsPaused = true;
         ysdk.adv.showRewardedVideo({ callbacks });
       }
 
     getBonusMoney() {
-        const MusicManager = find("Music_Manager");
-        MusicManager.getComponent(AudioSource).play();
-        GlobalValues.GameIsPaused = false;
-        
+        if (GlobalValues.MusicIsActivated == true) {
+            const MusicManager = find("Music_Manager");
+            MusicManager.getComponent(AudioSource).play();
+        }
+
         this.MoneyButton.active = false;
         this.ProgressBar.node.active = true;
+        GlobalValues.GameIsPaused = false;
         GlobalValues.BonusIsSpawned = false;
         GlobalValues.BonusIsActivated = true;
 
@@ -104,12 +108,14 @@ export class BonusManager extends Component {
     }
 
     getBonusDiamond() {
-        const MusicManager = find("Music_Manager");
-        MusicManager.getComponent(AudioSource).play();
-        GlobalValues.GameIsPaused = false;
+        if (GlobalValues.MusicIsActivated == true) {
+            const MusicManager = find("Music_Manager");
+            MusicManager.getComponent(AudioSource).play();
+        }
 
         this.DiamondButton.active = false;
         this.ProgressBar.node.active = true;
+        GlobalValues.GameIsPaused = false;
         GlobalValues.BonusIsSpawned = false;
         GlobalValues.BonusIsActivated = true;
 
