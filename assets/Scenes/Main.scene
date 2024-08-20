@@ -2663,7 +2663,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Crystal_Button",
+    "_name": "Diamond_Button",
     "_objFlags": 512,
     "__editorExtras__": {},
     "_parent": {
@@ -2997,7 +2997,7 @@
     },
     "component": "",
     "_componentId": "0aabb6D9L5NFLu27IkfhXYY",
-    "handler": "getBonusCrystal",
+    "handler": "onClickDiamondBonus",
     "customEventData": ""
   },
   {
@@ -3336,7 +3336,7 @@
     },
     "component": "",
     "_componentId": "0aabb6D9L5NFLu27IkfhXYY",
-    "handler": "getBonusMoney",
+    "handler": "onClickMoneyBonus",
     "customEventData": ""
   },
   {
@@ -3596,7 +3596,7 @@
     "MoneyButton": {
       "__id__": 85
     },
-    "CrystalButton": {
+    "DiamondButton": {
       "__id__": 76
     },
     "ProgressBar": {

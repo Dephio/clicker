@@ -1,5 +1,6 @@
 import { _decorator, Component, Label, Sprite, SpriteFrame } from 'cc';
 import { GlobalValues } from './GlobalValues';
+import { l10n } from '../../extensions/Yandex Games SDK/static/assets/ysdk';
 const { ccclass, property } = _decorator;
 
 @ccclass('SkinManager')
@@ -37,59 +38,59 @@ export class SkinManager extends Component {
         switch (GlobalValues.SkinNumber) {
             case 1:
                 this.Skin_Select_Button_1.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_1.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_1.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_2.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_2.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_2.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_3.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_3.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_3.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_4.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_4.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_4.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_5.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_5.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_5.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_6.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_6.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_6.getComponentInChildren(Label).string = l10n.t("select-text");
                 break;
             case 2:
                 this.Skin_Select_Button_1.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_1.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_1.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_2.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_2.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_2.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_3.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_3.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_3.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_4.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_4.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_4.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_5.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_5.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_5.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_6.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_6.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_6.getComponentInChildren(Label).string = l10n.t("select-text");
                 break;
             case 3:
                 this.Skin_Select_Button_1.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_1.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_1.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_2.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_2.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_2.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_3.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_3.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_3.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_4.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_4.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_4.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_5.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_5.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_5.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_6.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_6.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_6.getComponentInChildren(Label).string = l10n.t("select-text");
                 break;
             case 4:
                 this.Skin_Select_Button_1.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_1.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_1.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_2.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_2.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_2.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_3.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_3.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_3.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_4.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_4.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_4.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_5.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_5.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_5.getComponentInChildren(Label).string = l10n.t("select-text");
                 this.Skin_Select_Button_6.spriteFrame = this.Buy_Button;
-                this.Skin_Select_Button_6.getComponentInChildren(Label).string = "Надеть";
+                this.Skin_Select_Button_6.getComponentInChildren(Label).string = l10n.t("select-text");
                 break;
         }
 
@@ -122,27 +123,27 @@ export class SkinManager extends Component {
         switch (GlobalValues.SkinNumber) {
             case 5:
                 this.Skin_Select_Button_1.spriteFrame = this.Select_Button;
-                this.Skin_Select_Button_1.getComponentInChildren(Label).string = "Выбран";
+                this.Skin_Select_Button_1.getComponentInChildren(Label).string = l10n.t("selected-text");
                 break;
             case 6:
                 this.Skin_Select_Button_2.spriteFrame = this.Select_Button;
-                this.Skin_Select_Button_2.getComponentInChildren(Label).string = "Выбран";
+                this.Skin_Select_Button_2.getComponentInChildren(Label).string = l10n.t("selected-text");
                 break;
             case 7:
                 this.Skin_Select_Button_3.spriteFrame = this.Select_Button;
-                this.Skin_Select_Button_3.getComponentInChildren(Label).string = "Выбран";
+                this.Skin_Select_Button_3.getComponentInChildren(Label).string = l10n.t("selected-text");
                 break;
             case 8:
                 this.Skin_Select_Button_4.spriteFrame = this.Select_Button;
-                this.Skin_Select_Button_4.getComponentInChildren(Label).string = "Выбран";
+                this.Skin_Select_Button_4.getComponentInChildren(Label).string = l10n.t("selected-text");
                 break;
             case 9:
                 this.Skin_Select_Button_5.spriteFrame = this.Select_Button;
-                this.Skin_Select_Button_5.getComponentInChildren(Label).string = "Выбран";
+                this.Skin_Select_Button_5.getComponentInChildren(Label).string = l10n.t("selected-text");
                 break;
             case 10:
                 this.Skin_Select_Button_6.spriteFrame = this.Select_Button;
-                this.Skin_Select_Button_6.getComponentInChildren(Label).string = "Выбран";
+                this.Skin_Select_Button_6.getComponentInChildren(Label).string = l10n.t("selected-text");
                 break;
         }
     }
@@ -156,17 +157,17 @@ export class SkinManager extends Component {
             this.Skin_Select_Button_4.spriteFrame = this.Buy_Button;
             this.Skin_Select_Button_5.spriteFrame = this.Buy_Button;
             this.Skin_Select_Button_6.spriteFrame = this.Buy_Button;
-            this.Skin_Select_Button_1.getComponentInChildren(Label).string = "Выбран";
-            this.Skin_Select_Button_2.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_3.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_4.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_5.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_6.getComponentInChildren(Label).string = "Надеть";
+            this.Skin_Select_Button_1.getComponentInChildren(Label).string = l10n.t("selected-text");
+            this.Skin_Select_Button_2.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_3.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_4.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_5.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_6.getComponentInChildren(Label).string = l10n.t("select-text");
         }
         else {
             GlobalValues.SkinNumber = GlobalValues.PlayerLevel;
             this.Skin_Select_Button_1.spriteFrame = this.Buy_Button;
-            this.Skin_Select_Button_1.getComponentInChildren(Label).string = "Надеть";
+            this.Skin_Select_Button_1.getComponentInChildren(Label).string = l10n.t("select-text");
         }
     }
 
@@ -179,17 +180,17 @@ export class SkinManager extends Component {
             this.Skin_Select_Button_4.spriteFrame = this.Buy_Button;
             this.Skin_Select_Button_5.spriteFrame = this.Buy_Button;
             this.Skin_Select_Button_6.spriteFrame = this.Buy_Button;
-            this.Skin_Select_Button_1.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_2.getComponentInChildren(Label).string = "Выбран";
-            this.Skin_Select_Button_3.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_4.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_5.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_6.getComponentInChildren(Label).string = "Надеть";
+            this.Skin_Select_Button_1.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_2.getComponentInChildren(Label).string = l10n.t("selected-text");
+            this.Skin_Select_Button_3.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_4.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_5.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_6.getComponentInChildren(Label).string = l10n.t("select-text");
         }
         else {
             GlobalValues.SkinNumber = GlobalValues.PlayerLevel;
             this.Skin_Select_Button_2.spriteFrame = this.Buy_Button;
-            this.Skin_Select_Button_2.getComponentInChildren(Label).string = "Надеть";
+            this.Skin_Select_Button_2.getComponentInChildren(Label).string = l10n.t("select-text");
         }
     }
 
@@ -202,17 +203,17 @@ export class SkinManager extends Component {
             this.Skin_Select_Button_4.spriteFrame = this.Buy_Button;
             this.Skin_Select_Button_5.spriteFrame = this.Buy_Button;
             this.Skin_Select_Button_6.spriteFrame = this.Buy_Button;
-            this.Skin_Select_Button_1.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_2.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_3.getComponentInChildren(Label).string = "Выбран";
-            this.Skin_Select_Button_4.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_5.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_6.getComponentInChildren(Label).string = "Надеть";
+            this.Skin_Select_Button_1.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_2.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_3.getComponentInChildren(Label).string = l10n.t("selected-text");
+            this.Skin_Select_Button_4.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_5.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_6.getComponentInChildren(Label).string = l10n.t("select-text");
         }
         else {
             GlobalValues.SkinNumber = GlobalValues.PlayerLevel;
             this.Skin_Select_Button_3.spriteFrame = this.Buy_Button;
-            this.Skin_Select_Button_3.getComponentInChildren(Label).string = "Надеть";
+            this.Skin_Select_Button_3.getComponentInChildren(Label).string = l10n.t("select-text");
         }
     }
 
@@ -225,17 +226,17 @@ export class SkinManager extends Component {
             this.Skin_Select_Button_4.spriteFrame = this.Select_Button;
             this.Skin_Select_Button_5.spriteFrame = this.Buy_Button;
             this.Skin_Select_Button_6.spriteFrame = this.Buy_Button;
-            this.Skin_Select_Button_1.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_2.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_3.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_4.getComponentInChildren(Label).string = "Выбран";
-            this.Skin_Select_Button_5.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_6.getComponentInChildren(Label).string = "Надеть";
+            this.Skin_Select_Button_1.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_2.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_3.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_4.getComponentInChildren(Label).string = l10n.t("selected-text");
+            this.Skin_Select_Button_5.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_6.getComponentInChildren(Label).string = l10n.t("select-text");
         }
         else {
             GlobalValues.SkinNumber = GlobalValues.PlayerLevel;
             this.Skin_Select_Button_4.spriteFrame = this.Buy_Button;
-            this.Skin_Select_Button_4.getComponentInChildren(Label).string = "Надеть";
+            this.Skin_Select_Button_4.getComponentInChildren(Label).string = l10n.t("select-text");
         }
     }
 
@@ -248,17 +249,17 @@ export class SkinManager extends Component {
             this.Skin_Select_Button_4.spriteFrame = this.Buy_Button;
             this.Skin_Select_Button_5.spriteFrame = this.Select_Button;
             this.Skin_Select_Button_6.spriteFrame = this.Buy_Button;
-            this.Skin_Select_Button_1.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_2.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_3.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_4.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_5.getComponentInChildren(Label).string = "Выбран";
-            this.Skin_Select_Button_6.getComponentInChildren(Label).string = "Надеть";
+            this.Skin_Select_Button_1.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_2.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_3.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_4.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_5.getComponentInChildren(Label).string = l10n.t("selected-text");
+            this.Skin_Select_Button_6.getComponentInChildren(Label).string = l10n.t("select-text");
         }
         else {
             GlobalValues.SkinNumber = GlobalValues.PlayerLevel;
             this.Skin_Select_Button_5.spriteFrame = this.Buy_Button;
-            this.Skin_Select_Button_5.getComponentInChildren(Label).string = "Надеть";
+            this.Skin_Select_Button_5.getComponentInChildren(Label).string = l10n.t("select-text");
         }
     }
 
@@ -271,17 +272,17 @@ export class SkinManager extends Component {
             this.Skin_Select_Button_4.spriteFrame = this.Buy_Button;
             this.Skin_Select_Button_5.spriteFrame = this.Buy_Button;
             this.Skin_Select_Button_6.spriteFrame = this.Select_Button;
-            this.Skin_Select_Button_1.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_2.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_3.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_4.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_5.getComponentInChildren(Label).string = "Надеть";
-            this.Skin_Select_Button_6.getComponentInChildren(Label).string = "Выбран";
+            this.Skin_Select_Button_1.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_2.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_3.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_4.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_5.getComponentInChildren(Label).string = l10n.t("select-text");
+            this.Skin_Select_Button_6.getComponentInChildren(Label).string = l10n.t("selected-text");
         }
         else {
             GlobalValues.SkinNumber = GlobalValues.PlayerLevel;
             this.Skin_Select_Button_6.spriteFrame = this.Buy_Button;
-            this.Skin_Select_Button_6.getComponentInChildren(Label).string = "Надеть";
+            this.Skin_Select_Button_6.getComponentInChildren(Label).string = l10n.t("select-text");
         }
     }
 }

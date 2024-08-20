@@ -1,5 +1,6 @@
-import { _decorator, Component, Node, ProgressBar } from 'cc';
+import { _decorator, find, Component, Node, AudioSource, ProgressBar } from 'cc';
 import { GlobalValues } from './GlobalValues';
+import { ysdk } from '../../extensions/Yandex Games SDK/static/assets/ysdk';
 const { ccclass, property } = _decorator;
 
 @ccclass('BonusManager')
@@ -9,7 +10,7 @@ export class BonusManager extends Component {
     private MoneyButton: Node;
 
     @property(Node)
-    private CrystalButton: Node;
+    private DiamondButton: Node;
 
     @property(ProgressBar)
     private ProgressBar: ProgressBar;
@@ -50,7 +51,7 @@ export class BonusManager extends Component {
                     this.MoneyButton.active = true;
                     break;
                 case 1:
-                    this.CrystalButton.active = true;
+                    this.DiamondButton.active = true;
                     break;
             }
             GlobalValues.BonusIsSpawned = true;
@@ -60,13 +61,39 @@ export class BonusManager extends Component {
         }
     }
 
+    onClickMoneyBonus() {
+        const callbacks = {
+          onRewarded: this.getBonusMoney.bind(this),
+        };
+
+        const MusicManager = find("Music_Manager");
+        MusicManager.getComponent(AudioSource).pause();
+        GlobalValues.GameIsPaused = true;
+
+        ysdk.adv.showRewardedVideo({ callbacks });
+      }
+
+      onClickDiamondBonus() {
+        const callbacks = {
+          onRewarded: this.getBonusDiamond.bind(this),
+        };
+        
+        const MusicManager = find("Music_Manager");
+        MusicManager.getComponent(AudioSource).pause();
+        GlobalValues.GameIsPaused = true;
+
+        ysdk.adv.showRewardedVideo({ callbacks });
+      }
+
     getBonusMoney() {
+        const MusicManager = find("Music_Manager");
+        MusicManager.getComponent(AudioSource).play();
+        GlobalValues.GameIsPaused = false;
+        
         this.MoneyButton.active = false;
         this.ProgressBar.node.active = true;
         GlobalValues.BonusIsSpawned = false;
         GlobalValues.BonusIsActivated = true;
-
-        // Здесь будет скрипт, отвечающий за просмотр рекламы, а также постановки на паузу игры и выхода из неё
 
         if (GlobalValues.MoneyCount <= 9999499) {
             GlobalValues.MoneyCount += 500;
@@ -76,13 +103,15 @@ export class BonusManager extends Component {
         }
     }
 
-    getBonusCrystal() {
-        this.CrystalButton.active = false;
+    getBonusDiamond() {
+        const MusicManager = find("Music_Manager");
+        MusicManager.getComponent(AudioSource).play();
+        GlobalValues.GameIsPaused = false;
+
+        this.DiamondButton.active = false;
         this.ProgressBar.node.active = true;
         GlobalValues.BonusIsSpawned = false;
         GlobalValues.BonusIsActivated = true;
-
-        // Здесь будет скрипт, отвечающий за просмотр рекламы, а также постановки на паузу игры и выхода из неё
 
         if (GlobalValues.DiamondCount <= 99998) {
             GlobalValues.DiamondCount += 1;

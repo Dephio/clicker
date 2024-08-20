@@ -1,2 +1,16 @@
 {
+    "settings-text": "Settings",
+    "sound-text": "Sound",
+    "music-text": "Music",
+    "info-text": "Info",
+    "language-text": "Lang",
+    "toggle-text": "Save skin when changing levels",
+    "reference-text": "Reference",
+    "characteristics-text": "Characteristics",
+    "skins-text": "Skins",
+    "food-text": "Food",
+    "health-text": "Life time",
+    "money-text": "Coins per click",
+    "select-text": "Select",
+    "selected-text": "Selected"
 }
