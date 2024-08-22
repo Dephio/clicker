@@ -103,7 +103,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 540,
-      "y": 960,
+      "y": 960.0000000000002,
       "z": 0
     },
     "_lrot": {
@@ -252,7 +252,7 @@
     "_priority": 0,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 960,
+    "_orthoHeight": 960.0000000000001,
     "_near": 0,
     "_far": 1000,
     "_color": {
@@ -1687,7 +1687,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": " 75💎",
+    "_string": " 30💎",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 275,
@@ -2381,7 +2381,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 918.32275390625,
+      "width": 765.380859375,
       "height": 346.5
     },
     "_anchorPoint": {
@@ -2411,7 +2411,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": " 100💎",
+    "_string": " 45💎",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 275,
@@ -3105,7 +3105,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 841.9189453125,
+      "width": 688.97705078125,
       "height": 346.5
     },
     "_anchorPoint": {
@@ -3135,7 +3135,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "125💎",
+    "_string": "50💎",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 275,
@@ -4665,7 +4665,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": " 1💎",
+    "_string": " 5💎",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 265,
@@ -6009,7 +6009,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": " 1💎",
+    "_string": " 5💎",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 265,
@@ -11805,7 +11805,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": " 25💎",
+    "_string": " 15💎",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 275,
@@ -12499,7 +12499,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 688.97705078125,
+      "width": 765.380859375,
       "height": 346.5
     },
     "_anchorPoint": {
@@ -12529,7 +12529,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "50💎",
+    "_string": " 25💎",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 275,
@@ -15811,7 +15811,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 1080,
-      "height": 1920
+      "height": 1920.0000000000002
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",

@@ -42,7 +42,7 @@ export class LevelManager extends Component {
                 }
             }
         }
-        if (GlobalValues.ServerData.moneyCount >= 10000 && GlobalValues.ServerData.moneyCount <= 99999) {
+        if (GlobalValues.ServerData.moneyCount >= 10000 && GlobalValues.ServerData.moneyCount <= 49999) {
             if (GlobalValues.ServerData.playerLevel < 3) {
                 GlobalValues.LevelUpdate = true;
                 GlobalValues.LevelIsReceived = false;
@@ -62,7 +62,7 @@ export class LevelManager extends Component {
                 }
             }
         }
-        if (GlobalValues.ServerData.moneyCount >= 100000 && GlobalValues.ServerData.moneyCount <= 9999999) {
+        if (GlobalValues.ServerData.moneyCount >= 50000 && GlobalValues.ServerData.moneyCount <= 9999999) {
             if (GlobalValues.ServerData.playerLevel < 4) {
                 GlobalValues.LevelUpdate = true;
                 GlobalValues.LevelIsReceived = false;

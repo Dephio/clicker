@@ -82,40 +82,40 @@ export class SkinLoader extends Component {
     }
 
     onClickBuyButton2() {
-        if (GlobalValues.ServerData.diamondCount >= 25) {
-            GlobalValues.ServerData.diamondCount -= 25;
+        if (GlobalValues.ServerData.diamondCount >= 15) {
+            GlobalValues.ServerData.diamondCount -= 15;
             GlobalValues.ServerData.secondSkinIsActivated = true;
             GlobalValues.BuySoundIsPlaying = true;
         }
     }
 
     onClickBuyButton3() {
-        if (GlobalValues.ServerData.diamondCount >= 50) {
-            GlobalValues.ServerData.diamondCount -= 50;
+        if (GlobalValues.ServerData.diamondCount >= 25) {
+            GlobalValues.ServerData.diamondCount -= 25;
             GlobalValues.ServerData.thirdSkinIsActivated = true;
             GlobalValues.BuySoundIsPlaying = true;
         }
     }
 
     onClickBuyButton4() {
-        if (GlobalValues.ServerData.diamondCount >= 75) {
-            GlobalValues.ServerData.diamondCount -= 75;
+        if (GlobalValues.ServerData.diamondCount >= 30) {
+            GlobalValues.ServerData.diamondCount -= 30;
             GlobalValues.ServerData.fourthSkinIsActivated = true;
             GlobalValues.BuySoundIsPlaying = true;
         }
     }
 
     onClickBuyButton5() {
-        if (GlobalValues.ServerData.diamondCount >= 100) {
-            GlobalValues.ServerData.diamondCount -= 100;
+        if (GlobalValues.ServerData.diamondCount >= 45) {
+            GlobalValues.ServerData.diamondCount -= 45;
             GlobalValues.ServerData.fifthSkinIsActivated = true;
             GlobalValues.BuySoundIsPlaying = true;
         }
     }
 
     onClickBuyButton6() {
-        if (GlobalValues.ServerData.diamondCount >= 125) {
-            GlobalValues.ServerData.diamondCount -= 125;
+        if (GlobalValues.ServerData.diamondCount >= 50) {
+            GlobalValues.ServerData.diamondCount -= 50;
             GlobalValues.ServerData.sixthSkinIsActivated = true;
             GlobalValues.BuySoundIsPlaying = true;
         }

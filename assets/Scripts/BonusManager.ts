@@ -138,8 +138,8 @@ export class BonusManager extends Component {
         GlobalValues.BonusIsSpawned = false;
         GlobalValues.BonusIsActivated = true;
 
-        if (GlobalValues.ServerData.diamondCount <= 99998) {
-            GlobalValues.ServerData.diamondCount += 1;
+        if (GlobalValues.ServerData.diamondCount <= 99995) {
+            GlobalValues.ServerData.diamondCount += 5;
         }
         else {
             GlobalValues.ServerData.diamondCount = 99999;

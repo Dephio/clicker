@@ -53,25 +53,25 @@ export class CharacteristicsLoader extends Component {
         switch (GlobalValues.ServerData.healthLevel) {
             case 0:
                 this.Money_Button_Health.getComponentInChildren(Label).string = "500$";
-                this.Diamond_Button_Health.getComponentInChildren(Label).string = " 1💎";
+                this.Diamond_Button_Health.getComponentInChildren(Label).string = " 5💎";
                 this.Health_Bar.progress = 0;
                 break;
 
             case 1:
-                this.Money_Button_Health.getComponentInChildren(Label).string = "5000$";
+                this.Money_Button_Health.getComponentInChildren(Label).string = "2500$";
                 this.Diamond_Button_Health.getComponentInChildren(Label).string = " 10💎";
                 this.Health_Bar.progress = 0.25;
                 break;
     
             case 2:
-                this.Money_Button_Health.getComponentInChildren(Label).string = "50000$";
-                this.Diamond_Button_Health.getComponentInChildren(Label).string = " 50💎";
+                this.Money_Button_Health.getComponentInChildren(Label).string = "5000$";
+                this.Diamond_Button_Health.getComponentInChildren(Label).string = " 20💎";
                 this.Health_Bar.progress = 0.5;
                 break;
                     
             case 3:
-                this.Money_Button_Health.getComponentInChildren(Label).string = "500000$";
-                this.Diamond_Button_Health.getComponentInChildren(Label).string = " 150💎";
+                this.Money_Button_Health.getComponentInChildren(Label).string = "25000$";
+                this.Diamond_Button_Health.getComponentInChildren(Label).string = " 25💎";
                 this.Health_Bar.progress = 0.75;
                 break;
 
@@ -85,25 +85,25 @@ export class CharacteristicsLoader extends Component {
         switch (GlobalValues.ServerData.moneyLevel) {
             case 0:
                 this.Money_Button_Money.getComponentInChildren(Label).string = "500$";
-                this.Diamond_Button_Money.getComponentInChildren(Label).string = " 1💎";
+                this.Diamond_Button_Money.getComponentInChildren(Label).string = " 5💎";
                 this.Money_Bar.progress = 0;
                 break;
 
             case 1:
-                this.Money_Button_Money.getComponentInChildren(Label).string = "5000$";
+                this.Money_Button_Money.getComponentInChildren(Label).string = "2500$";
                 this.Diamond_Button_Money.getComponentInChildren(Label).string = " 10💎";
                 this.Money_Bar.progress = 0.25;
                 break;
     
             case 2:
-                this.Money_Button_Money.getComponentInChildren(Label).string = "50000$";
-                this.Diamond_Button_Money.getComponentInChildren(Label).string = " 50💎";
+                this.Money_Button_Money.getComponentInChildren(Label).string = "5000$";
+                this.Diamond_Button_Money.getComponentInChildren(Label).string = " 20💎";
                 this.Money_Bar.progress = 0.5;
                 break;
                     
             case 3:
-                this.Money_Button_Money.getComponentInChildren(Label).string = "500000$";
-                this.Diamond_Button_Money.getComponentInChildren(Label).string = " 150💎";
+                this.Money_Button_Money.getComponentInChildren(Label).string = "25000$";
+                this.Diamond_Button_Money.getComponentInChildren(Label).string = " 25💎";
                 this.Money_Bar.progress = 0.75;
                 break;
 
@@ -128,8 +128,8 @@ export class CharacteristicsLoader extends Component {
                 break;
 
             case 1:
-                if (GlobalValues.ServerData.moneyCount >= 5000) {
-                    GlobalValues.ServerData.moneyCount -= 5000;
+                if (GlobalValues.ServerData.moneyCount >= 2500) {
+                    GlobalValues.ServerData.moneyCount -= 2500;
                     GlobalValues.ServerData.healthLevel = 2;
                     GlobalValues.ServerData.lifeTime += 11.25;
                     this.Health_Bar.progress += 0.25;
@@ -138,8 +138,8 @@ export class CharacteristicsLoader extends Component {
                 break;
 
             case 2:
-                if (GlobalValues.ServerData.moneyCount >= 50000) {
-                    GlobalValues.ServerData.moneyCount -= 50000;
+                if (GlobalValues.ServerData.moneyCount >= 5000) {
+                    GlobalValues.ServerData.moneyCount -= 5000;
                     GlobalValues.ServerData.healthLevel = 3;
                     GlobalValues.ServerData.lifeTime += 11.25;
                     this.Health_Bar.progress += 0.25;
@@ -148,8 +148,8 @@ export class CharacteristicsLoader extends Component {
                 break;
 
             case 3:
-                if (GlobalValues.ServerData.moneyCount >= 500000) {
-                    GlobalValues.ServerData.moneyCount -= 500000;
+                if (GlobalValues.ServerData.moneyCount >= 25000) {
+                    GlobalValues.ServerData.moneyCount -= 25000;
                     GlobalValues.ServerData.healthLevel = 4;
                     GlobalValues.ServerData.lifeTime += 11.25;
                     this.Health_Bar.progress += 0.25;
@@ -162,8 +162,8 @@ export class CharacteristicsLoader extends Component {
     onClickDiamondButtonHealth() {
         switch (GlobalValues.ServerData.healthLevel) {
             case 0:
-                if (GlobalValues.ServerData.diamondCount >= 1) {
-                    GlobalValues.ServerData.diamondCount -= 1;
+                if (GlobalValues.ServerData.diamondCount >= 5) {
+                    GlobalValues.ServerData.diamondCount -= 5;
                     GlobalValues.ServerData.healthLevel = 1;
                     GlobalValues.ServerData.lifeTime += 11.25;
                     this.Health_Bar.progress += 0.25;
@@ -182,8 +182,8 @@ export class CharacteristicsLoader extends Component {
                 break;
 
             case 2:
-                if (GlobalValues.ServerData.diamondCount >= 50) {
-                    GlobalValues.ServerData.diamondCount -= 50;
+                if (GlobalValues.ServerData.diamondCount >= 20) {
+                    GlobalValues.ServerData.diamondCount -= 20;
                     GlobalValues.ServerData.healthLevel = 3;
                     GlobalValues.ServerData.lifeTime += 11.25;
                     this.Health_Bar.progress += 0.25;
@@ -192,8 +192,8 @@ export class CharacteristicsLoader extends Component {
                 break;
 
             case 3:
-                if (GlobalValues.ServerData.diamondCount >= 150) {
-                    GlobalValues.ServerData.diamondCount -= 150;
+                if (GlobalValues.ServerData.diamondCount >= 25) {
+                    GlobalValues.ServerData.diamondCount -= 25;
                     GlobalValues.ServerData.healthLevel = 4;
                     GlobalValues.ServerData.lifeTime += 11.25;
                     this.Health_Bar.progress += 0.25;
@@ -216,8 +216,8 @@ export class CharacteristicsLoader extends Component {
                 break;
 
             case 1:
-                if (GlobalValues.ServerData.moneyCount >= 5000) {
-                    GlobalValues.ServerData.moneyCount -= 5000;
+                if (GlobalValues.ServerData.moneyCount >= 2500) {
+                    GlobalValues.ServerData.moneyCount -= 2500;
                     GlobalValues.ServerData.moneyLevel = 2;
                     GlobalValues.ServerData.moneyForClick += 1;
                     this.Money_Bar.progress += 0.25;
@@ -226,8 +226,8 @@ export class CharacteristicsLoader extends Component {
                 break;
 
             case 2:
-                if (GlobalValues.ServerData.moneyCount >= 50000) {
-                    GlobalValues.ServerData.moneyCount -= 50000;
+                if (GlobalValues.ServerData.moneyCount >= 5000) {
+                    GlobalValues.ServerData.moneyCount -= 5000;
                     GlobalValues.ServerData.moneyLevel = 3;
                     GlobalValues.ServerData.moneyForClick += 1;
                     this.Money_Bar.progress += 0.25;
@@ -236,8 +236,8 @@ export class CharacteristicsLoader extends Component {
                 break;
 
             case 3:
-                if (GlobalValues.ServerData.moneyCount >= 500000) {
-                    GlobalValues.ServerData.moneyCount -= 500000;
+                if (GlobalValues.ServerData.moneyCount >= 25000) {
+                    GlobalValues.ServerData.moneyCount -= 25000;
                     GlobalValues.ServerData.moneyLevel = 4;
                     GlobalValues.ServerData.moneyForClick += 1;
                     this.Money_Bar.progress += 0.25;
@@ -250,8 +250,8 @@ export class CharacteristicsLoader extends Component {
     onClickDiamondButtonMoney() {
         switch (GlobalValues.ServerData.moneyLevel) {
             case 0:
-                if (GlobalValues.ServerData.diamondCount >= 1) {
-                    GlobalValues.ServerData.diamondCount -= 1;
+                if (GlobalValues.ServerData.diamondCount >= 5) {
+                    GlobalValues.ServerData.diamondCount -= 5;
                     GlobalValues.ServerData.moneyLevel = 1;
                     GlobalValues.ServerData.moneyForClick += 1;
                     this.Money_Bar.progress += 0.25;
@@ -270,8 +270,8 @@ export class CharacteristicsLoader extends Component {
                 break;
                 
             case 2:
-                if (GlobalValues.ServerData.diamondCount >= 50) {
-                    GlobalValues.ServerData.diamondCount -= 50;
+                if (GlobalValues.ServerData.diamondCount >= 20) {
+                    GlobalValues.ServerData.diamondCount -= 20;
                     GlobalValues.ServerData.moneyLevel = 3;
                     GlobalValues.ServerData.moneyForClick += 1;
                     this.Money_Bar.progress += 0.25;
@@ -280,8 +280,8 @@ export class CharacteristicsLoader extends Component {
                 break;
                 
             case 3:
-                if (GlobalValues.ServerData.diamondCount >= 150) {
-                    GlobalValues.ServerData.diamondCount -= 150;
+                if (GlobalValues.ServerData.diamondCount >= 25) {
+                    GlobalValues.ServerData.diamondCount -= 25;
                     GlobalValues.ServerData.moneyLevel = 4;
                     GlobalValues.ServerData.moneyForClick += 1;
                     this.Money_Bar.progress += 0.25;
