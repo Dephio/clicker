@@ -9,18 +9,18 @@ export class ClikerManager extends Component {
     private MoneyLabel: Label;
 
     protected update(): void {
-        this.MoneyLabel.string = GlobalValues.MoneyCount.toString();
+        this.MoneyLabel.string = GlobalValues.ServerData.moneyCount.toString();
     }
 
     onClickPlayer() {
         if (GlobalValues.GameIsPaused == false && GlobalValues.GameIsOver == false) {
-            if (GlobalValues.MoneyCount < 9999999) {
-                if ((GlobalValues.MoneyCount + GlobalValues.MoneyForClick) >= 9999999) {
-                    GlobalValues.MoneyCount = 9999999;
+            if (GlobalValues.ServerData.moneyCount < 9999999) {
+                if ((GlobalValues.ServerData.moneyCount + GlobalValues.ServerData.moneyForClick) >= 9999999) {
+                    GlobalValues.ServerData.moneyCount = 9999999;
                 }
                 else {
-                    GlobalValues.MoneyCount += GlobalValues.MoneyForClick;
-                    this.MoneyLabel.string = GlobalValues.MoneyCount.toString();
+                    GlobalValues.ServerData.moneyCount += GlobalValues.ServerData.moneyForClick;
+                    this.MoneyLabel.string = GlobalValues.ServerData.moneyCount.toString();
                 }
             }
         }

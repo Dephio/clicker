@@ -24,7 +24,7 @@ export class CharacteristicsLoader extends Component {
     private Money_Bar: ProgressBar;
 
     protected update(): void {
-        if (GlobalValues.HealthLevel < GlobalValues.PlayerLevel) {
+        if (GlobalValues.ServerData.healthLevel < GlobalValues.ServerData.playerLevel) {
             this.Diamond_Button_Health.grayscale = false;
             this.Money_Button_Health.grayscale = false;
             this.Diamond_Button_Health.getComponent(Button).interactable = true;
@@ -37,7 +37,7 @@ export class CharacteristicsLoader extends Component {
             this.Money_Button_Health.getComponent(Button).interactable = false;
         }
 
-        if (GlobalValues.MoneyLevel < GlobalValues.PlayerLevel) {
+        if (GlobalValues.ServerData.moneyLevel < GlobalValues.ServerData.playerLevel) {
             this.Diamond_Button_Money.grayscale = false;
             this.Money_Button_Money.grayscale = false;
             this.Diamond_Button_Money.getComponent(Button).interactable = true;
@@ -50,7 +50,7 @@ export class CharacteristicsLoader extends Component {
             this.Money_Button_Money.getComponent(Button).interactable = false;
         }
 
-        switch (GlobalValues.HealthLevel) {
+        switch (GlobalValues.ServerData.healthLevel) {
             case 0:
                 this.Money_Button_Health.getComponentInChildren(Label).string = "500$";
                 this.Diamond_Button_Health.getComponentInChildren(Label).string = " 1💎";
@@ -82,7 +82,7 @@ export class CharacteristicsLoader extends Component {
                 break;
         }
 
-        switch (GlobalValues.MoneyLevel) {
+        switch (GlobalValues.ServerData.moneyLevel) {
             case 0:
                 this.Money_Button_Money.getComponentInChildren(Label).string = "500$";
                 this.Diamond_Button_Money.getComponentInChildren(Label).string = " 1💎";
@@ -116,42 +116,42 @@ export class CharacteristicsLoader extends Component {
     }
 
     onClickMoneyButtonHealth() {
-        switch (GlobalValues.HealthLevel) {
+        switch (GlobalValues.ServerData.healthLevel) {
             case 0:
-                if (GlobalValues.MoneyCount >= 500) {
-                    GlobalValues.MoneyCount -= 500;
-                    GlobalValues.HealthLevel = 1;
-                    GlobalValues.LifeTime += 11.25;
+                if (GlobalValues.ServerData.moneyCount >= 500) {
+                    GlobalValues.ServerData.moneyCount -= 500;
+                    GlobalValues.ServerData.healthLevel = 1;
+                    GlobalValues.ServerData.lifeTime += 11.25;
                     this.Health_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
                 break;
 
             case 1:
-                if (GlobalValues.MoneyCount >= 5000) {
-                    GlobalValues.MoneyCount -= 5000;
-                    GlobalValues.HealthLevel = 2;
-                    GlobalValues.LifeTime += 11.25;
+                if (GlobalValues.ServerData.moneyCount >= 5000) {
+                    GlobalValues.ServerData.moneyCount -= 5000;
+                    GlobalValues.ServerData.healthLevel = 2;
+                    GlobalValues.ServerData.lifeTime += 11.25;
                     this.Health_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
                 break;
 
             case 2:
-                if (GlobalValues.MoneyCount >= 50000) {
-                    GlobalValues.MoneyCount -= 50000;
-                    GlobalValues.HealthLevel = 3;
-                    GlobalValues.LifeTime += 11.25;
+                if (GlobalValues.ServerData.moneyCount >= 50000) {
+                    GlobalValues.ServerData.moneyCount -= 50000;
+                    GlobalValues.ServerData.healthLevel = 3;
+                    GlobalValues.ServerData.lifeTime += 11.25;
                     this.Health_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
                 break;
 
             case 3:
-                if (GlobalValues.MoneyCount >= 500000) {
-                    GlobalValues.MoneyCount -= 500000;
-                    GlobalValues.HealthLevel = 4;
-                    GlobalValues.LifeTime += 11.25;
+                if (GlobalValues.ServerData.moneyCount >= 500000) {
+                    GlobalValues.ServerData.moneyCount -= 500000;
+                    GlobalValues.ServerData.healthLevel = 4;
+                    GlobalValues.ServerData.lifeTime += 11.25;
                     this.Health_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
@@ -160,42 +160,42 @@ export class CharacteristicsLoader extends Component {
     }
 
     onClickDiamondButtonHealth() {
-        switch (GlobalValues.HealthLevel) {
+        switch (GlobalValues.ServerData.healthLevel) {
             case 0:
-                if (GlobalValues.DiamondCount >= 1) {
-                    GlobalValues.DiamondCount -= 1;
-                    GlobalValues.HealthLevel = 1;
-                    GlobalValues.LifeTime += 11.25;
+                if (GlobalValues.ServerData.diamondCount >= 1) {
+                    GlobalValues.ServerData.diamondCount -= 1;
+                    GlobalValues.ServerData.healthLevel = 1;
+                    GlobalValues.ServerData.lifeTime += 11.25;
                     this.Health_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
                 break;
 
             case 1:
-                if (GlobalValues.DiamondCount >= 10) {
-                    GlobalValues.DiamondCount -= 10;
-                    GlobalValues.HealthLevel = 2;
-                    GlobalValues.LifeTime += 11.25;
+                if (GlobalValues.ServerData.diamondCount >= 10) {
+                    GlobalValues.ServerData.diamondCount -= 10;
+                    GlobalValues.ServerData.healthLevel = 2;
+                    GlobalValues.ServerData.lifeTime += 11.25;
                     this.Health_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
                 break;
 
             case 2:
-                if (GlobalValues.DiamondCount >= 50) {
-                    GlobalValues.DiamondCount -= 50;
-                    GlobalValues.HealthLevel = 3;
-                    GlobalValues.LifeTime += 11.25;
+                if (GlobalValues.ServerData.diamondCount >= 50) {
+                    GlobalValues.ServerData.diamondCount -= 50;
+                    GlobalValues.ServerData.healthLevel = 3;
+                    GlobalValues.ServerData.lifeTime += 11.25;
                     this.Health_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
                 break;
 
             case 3:
-                if (GlobalValues.DiamondCount >= 150) {
-                    GlobalValues.DiamondCount -= 150;
-                    GlobalValues.HealthLevel = 4;
-                    GlobalValues.LifeTime += 11.25;
+                if (GlobalValues.ServerData.diamondCount >= 150) {
+                    GlobalValues.ServerData.diamondCount -= 150;
+                    GlobalValues.ServerData.healthLevel = 4;
+                    GlobalValues.ServerData.lifeTime += 11.25;
                     this.Health_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
@@ -204,42 +204,42 @@ export class CharacteristicsLoader extends Component {
     }
 
     onClickMoneyButtonMoney() {
-        switch (GlobalValues.MoneyLevel) {
+        switch (GlobalValues.ServerData.moneyLevel) {
             case 0:
-                if (GlobalValues.MoneyCount >= 500) {
-                    GlobalValues.MoneyCount -= 500;
-                    GlobalValues.MoneyLevel = 1;
-                    GlobalValues.MoneyForClick += 1;
+                if (GlobalValues.ServerData.moneyCount >= 500) {
+                    GlobalValues.ServerData.moneyCount -= 500;
+                    GlobalValues.ServerData.moneyLevel = 1;
+                    GlobalValues.ServerData.moneyForClick += 1;
                     this.Money_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
                 break;
 
             case 1:
-                if (GlobalValues.MoneyCount >= 5000) {
-                    GlobalValues.MoneyCount -= 5000;
-                    GlobalValues.MoneyLevel = 2;
-                    GlobalValues.MoneyForClick += 1;
+                if (GlobalValues.ServerData.moneyCount >= 5000) {
+                    GlobalValues.ServerData.moneyCount -= 5000;
+                    GlobalValues.ServerData.moneyLevel = 2;
+                    GlobalValues.ServerData.moneyForClick += 1;
                     this.Money_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
                 break;
 
             case 2:
-                if (GlobalValues.MoneyCount >= 50000) {
-                    GlobalValues.MoneyCount -= 50000;
-                    GlobalValues.MoneyLevel = 3;
-                    GlobalValues.MoneyForClick += 1;
+                if (GlobalValues.ServerData.moneyCount >= 50000) {
+                    GlobalValues.ServerData.moneyCount -= 50000;
+                    GlobalValues.ServerData.moneyLevel = 3;
+                    GlobalValues.ServerData.moneyForClick += 1;
                     this.Money_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
                 break;
 
             case 3:
-                if (GlobalValues.MoneyCount >= 500000) {
-                    GlobalValues.MoneyCount -= 500000;
-                    GlobalValues.MoneyLevel = 4;
-                    GlobalValues.MoneyForClick += 1;
+                if (GlobalValues.ServerData.moneyCount >= 500000) {
+                    GlobalValues.ServerData.moneyCount -= 500000;
+                    GlobalValues.ServerData.moneyLevel = 4;
+                    GlobalValues.ServerData.moneyForClick += 1;
                     this.Money_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
@@ -248,42 +248,42 @@ export class CharacteristicsLoader extends Component {
     }
 
     onClickDiamondButtonMoney() {
-        switch (GlobalValues.MoneyLevel) {
+        switch (GlobalValues.ServerData.moneyLevel) {
             case 0:
-                if (GlobalValues.DiamondCount >= 1) {
-                    GlobalValues.DiamondCount -= 1;
-                    GlobalValues.MoneyLevel = 1;
-                    GlobalValues.MoneyForClick += 1;
+                if (GlobalValues.ServerData.diamondCount >= 1) {
+                    GlobalValues.ServerData.diamondCount -= 1;
+                    GlobalValues.ServerData.moneyLevel = 1;
+                    GlobalValues.ServerData.moneyForClick += 1;
                     this.Money_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
                 break;
 
             case 1:
-                if (GlobalValues.DiamondCount >= 10) {
-                    GlobalValues.DiamondCount -= 10;
-                    GlobalValues.MoneyLevel = 2;
-                    GlobalValues.MoneyForClick += 1;
+                if (GlobalValues.ServerData.diamondCount >= 10) {
+                    GlobalValues.ServerData.diamondCount -= 10;
+                    GlobalValues.ServerData.moneyLevel = 2;
+                    GlobalValues.ServerData.moneyForClick += 1;
                     this.Money_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
                 break;
                 
             case 2:
-                if (GlobalValues.DiamondCount >= 50) {
-                    GlobalValues.DiamondCount -= 50;
-                    GlobalValues.MoneyLevel = 3;
-                    GlobalValues.MoneyForClick += 1;
+                if (GlobalValues.ServerData.diamondCount >= 50) {
+                    GlobalValues.ServerData.diamondCount -= 50;
+                    GlobalValues.ServerData.moneyLevel = 3;
+                    GlobalValues.ServerData.moneyForClick += 1;
                     this.Money_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }
                 break;
                 
             case 3:
-                if (GlobalValues.DiamondCount >= 150) {
-                    GlobalValues.DiamondCount -= 150;
-                    GlobalValues.MoneyLevel = 4;
-                    GlobalValues.MoneyForClick += 1;
+                if (GlobalValues.ServerData.diamondCount >= 150) {
+                    GlobalValues.ServerData.diamondCount -= 150;
+                    GlobalValues.ServerData.moneyLevel = 4;
+                    GlobalValues.ServerData.moneyForClick += 1;
                     this.Money_Bar.progress += 0.25;
                     GlobalValues.BuySoundIsPlaying = true;
                 }

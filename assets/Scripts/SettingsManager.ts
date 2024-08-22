@@ -1,4 +1,4 @@
-import { _decorator, find, Component, Node, AudioSource, Sprite, SpriteFrame, Toggle, Label, Vec3 } from 'cc';
+import { _decorator, find, Component, Node, AudioSource, Sprite, SpriteFrame, Toggle, Label } from 'cc';
 import { GlobalValues } from './GlobalValues';
 import { l10n } from '../../extensions/Yandex Games SDK/static/assets/ysdk';
 const { ccclass, property } = _decorator;
@@ -76,7 +76,7 @@ export class SettingsManager extends Component {
             this.MusicButton.grayscale = false;
         }
 
-        if (GlobalValues.SkinsIsSaved == false) {
+        if (GlobalValues.ServerData.skinsIsSaved == false) {
             this.SkinToggle.isChecked = false;
         }
         else {
@@ -84,17 +84,18 @@ export class SettingsManager extends Component {
         }
 
         switch (l10n.currentLanguage) {
-            case 'ru':
+            case "ru":
                 this.onLoadRussianSettings();
                 break;
 
-            case 'en':
+            case "en":
                 this.onLoadEnglishSettings();
                 break;
         }
     }
 
     onLoadEnglishSettings() {
+        GlobalValues.ServerData.gameLanguage = l10n.currentLanguage;
         this.LanguageButton.spriteFrame = this.LanguageEN;
         this.InfoEN.active = true;
         this.InfoRU.active = false;
@@ -106,6 +107,7 @@ export class SettingsManager extends Component {
     }
 
     onLoadRussianSettings() {
+        GlobalValues.ServerData.gameLanguage = l10n.currentLanguage;
         this.LanguageButton.spriteFrame = this.LanguageRU;
         this.InfoEN.active = false;
         this.InfoRU.active = true;
@@ -165,22 +167,22 @@ export class SettingsManager extends Component {
 
     onClickToggle() {
         if (this.SkinToggle.isChecked == false) {
-            GlobalValues.SkinsIsSaved = true;
+            GlobalValues.ServerData.skinsIsSaved = true;
         }
         else {
-            GlobalValues.SkinsIsSaved = false;
+            GlobalValues.ServerData.skinsIsSaved = false;
         }
     }
 
     onClickLanguage() {
         switch (l10n.currentLanguage) {
-            case 'ru':
-                l10n.changeLanguage('en');
+            case "ru":
+                l10n.changeLanguage("en");
                 this.onLoadEnglishSettings();
                 break;
 
-            case 'en':
-                l10n.changeLanguage('ru');
+            case "en":
+                l10n.changeLanguage("ru");
                 this.onLoadRussianSettings();
                 break;
         }

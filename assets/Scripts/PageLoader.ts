@@ -34,7 +34,7 @@ export class PageLoader extends Component {
     }
 
     protected update(): void {
-        this.Diamond_Label.string = GlobalValues.DiamondCount.toString();
+        this.Diamond_Label.string = GlobalValues.ServerData.diamondCount.toString();
     }
 
     rightClick() {

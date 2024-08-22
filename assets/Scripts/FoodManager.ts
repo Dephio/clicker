@@ -6,10 +6,10 @@ const { ccclass } = _decorator;
 export class FoodManager extends Component {
 
     onClickButton1() {
-        switch (GlobalValues.PlayerLevel) {
+        switch (GlobalValues.ServerData.playerLevel) {
             case 1:
-                if (GlobalValues.MoneyCount >= 10 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 10;
+                if (GlobalValues.ServerData.moneyCount >= 10 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 10;
                     GlobalValues.HealthPoints += 0.1;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -19,8 +19,8 @@ export class FoodManager extends Component {
                 break;
         
             case 2:
-                if (GlobalValues.MoneyCount >= 10 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 10;
+                if (GlobalValues.ServerData.moneyCount >= 10 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 10;
                     GlobalValues.HealthPoints += 0.01;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -30,8 +30,8 @@ export class FoodManager extends Component {
                 break;
 
             case 3:
-                if (GlobalValues.MoneyCount >= 10 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 10;
+                if (GlobalValues.ServerData.moneyCount >= 10 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 10;
                     GlobalValues.HealthPoints += 0.001;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -41,8 +41,8 @@ export class FoodManager extends Component {
                 break;
 
             case 4:
-                if (GlobalValues.MoneyCount >= 10 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 10;
+                if (GlobalValues.ServerData.moneyCount >= 10 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 10;
                     GlobalValues.HealthPoints += 0.0001;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -54,10 +54,10 @@ export class FoodManager extends Component {
     }
 
     onClickButton2() {
-        switch (GlobalValues.PlayerLevel) {
+        switch (GlobalValues.ServerData.playerLevel) {
             case 1:
-                if (GlobalValues.MoneyCount >= 50 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 50;
+                if (GlobalValues.ServerData.moneyCount >= 50 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 50;
                     GlobalValues.HealthPoints += 0.4;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -67,8 +67,8 @@ export class FoodManager extends Component {
                 break;
         
             case 2:
-                if (GlobalValues.MoneyCount >= 50 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 50;
+                if (GlobalValues.ServerData.moneyCount >= 50 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 50;
                     GlobalValues.HealthPoints += 0.04;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -78,8 +78,8 @@ export class FoodManager extends Component {
                 break;
 
             case 3:
-                if (GlobalValues.MoneyCount >= 50 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 50;
+                if (GlobalValues.ServerData.moneyCount >= 50 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 50;
                     GlobalValues.HealthPoints += 0.004;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -89,8 +89,8 @@ export class FoodManager extends Component {
                 break;
 
             case 4:
-                if (GlobalValues.MoneyCount >= 50 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 50;
+                if (GlobalValues.ServerData.moneyCount >= 50 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 50;
                     GlobalValues.HealthPoints += 0.0004;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -102,10 +102,10 @@ export class FoodManager extends Component {
     }
 
     onClickButton3() {
-        switch (GlobalValues.PlayerLevel) {
+        switch (GlobalValues.ServerData.playerLevel) {
             case 1:
-                if (GlobalValues.MoneyCount >= 80 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 80;
+                if (GlobalValues.ServerData.moneyCount >= 80 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 80;
                     GlobalValues.HealthPoints += 0.6;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -115,8 +115,8 @@ export class FoodManager extends Component {
                 break;
         
             case 2:
-                if (GlobalValues.MoneyCount >= 80 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 80;
+                if (GlobalValues.ServerData.moneyCount >= 80 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 80;
                     GlobalValues.HealthPoints += 0.06;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -126,8 +126,8 @@ export class FoodManager extends Component {
                 break;
 
             case 3:
-                if (GlobalValues.MoneyCount >= 80 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 80;
+                if (GlobalValues.ServerData.moneyCount >= 80 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 80;
                     GlobalValues.HealthPoints += 0.006;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -137,8 +137,8 @@ export class FoodManager extends Component {
                 break;
 
             case 4:
-                if (GlobalValues.MoneyCount >= 80 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 80;
+                if (GlobalValues.ServerData.moneyCount >= 80 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 80;
                     GlobalValues.HealthPoints += 0.0006;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -150,10 +150,10 @@ export class FoodManager extends Component {
     }
 
     onClickButton4() {
-        switch (GlobalValues.PlayerLevel) {
+        switch (GlobalValues.ServerData.playerLevel) {
             case 2:
-                if (GlobalValues.MoneyCount >= 80 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 80;
+                if (GlobalValues.ServerData.moneyCount >= 80 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 80;
                     GlobalValues.HealthPoints += 0.15;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -163,8 +163,8 @@ export class FoodManager extends Component {
                 break;
         
             case 3:
-                if (GlobalValues.MoneyCount >= 80 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 80;
+                if (GlobalValues.ServerData.moneyCount >= 80 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 80;
                     GlobalValues.HealthPoints += 0.015;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -174,8 +174,8 @@ export class FoodManager extends Component {
                 break;
 
             case 4:
-                if (GlobalValues.MoneyCount >= 80 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 80;
+                if (GlobalValues.ServerData.moneyCount >= 80 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 80;
                     GlobalValues.HealthPoints += 0.0015;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -187,10 +187,10 @@ export class FoodManager extends Component {
     }
 
     onClickButton5() {
-        switch (GlobalValues.PlayerLevel) {
+        switch (GlobalValues.ServerData.playerLevel) {
             case 2:
-                if (GlobalValues.MoneyCount >= 200 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 200;
+                if (GlobalValues.ServerData.moneyCount >= 200 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 200;
                     GlobalValues.HealthPoints += 0.5;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -200,8 +200,8 @@ export class FoodManager extends Component {
                 break;
 
             case 3:
-                if (GlobalValues.MoneyCount >= 200 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 200;
+                if (GlobalValues.ServerData.moneyCount >= 200 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 200;
                     GlobalValues.HealthPoints += 0.05;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -211,8 +211,8 @@ export class FoodManager extends Component {
                 break;
 
             case 4:
-                if (GlobalValues.MoneyCount >= 200 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 200;
+                if (GlobalValues.ServerData.moneyCount >= 200 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 200;
                     GlobalValues.HealthPoints += 0.005;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -224,10 +224,10 @@ export class FoodManager extends Component {
     }
 
     onClickButton6() {
-        switch (GlobalValues.PlayerLevel) {
+        switch (GlobalValues.ServerData.playerLevel) {
             case 2:
-                if (GlobalValues.MoneyCount >= 300 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 300;
+                if (GlobalValues.ServerData.moneyCount >= 300 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 300;
                     GlobalValues.HealthPoints += 0.6;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -237,8 +237,8 @@ export class FoodManager extends Component {
                 break;
 
             case 3:
-                if (GlobalValues.MoneyCount >= 300 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 300;
+                if (GlobalValues.ServerData.moneyCount >= 300 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 300;
                     GlobalValues.HealthPoints += 0.06;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -248,8 +248,8 @@ export class FoodManager extends Component {
                 break;
 
             case 4:
-                if (GlobalValues.MoneyCount >= 300 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 300;
+                if (GlobalValues.ServerData.moneyCount >= 300 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 300;
                     GlobalValues.HealthPoints += 0.006;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -261,10 +261,10 @@ export class FoodManager extends Component {
     }
 
     onClickButton7() {
-        switch (GlobalValues.PlayerLevel) {
+        switch (GlobalValues.ServerData.playerLevel) {
             case 3:
-                if (GlobalValues.MoneyCount >= 290 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 290;
+                if (GlobalValues.ServerData.moneyCount >= 290 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 290;
                     GlobalValues.HealthPoints += 0.2;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -274,8 +274,8 @@ export class FoodManager extends Component {
                 break;
 
             case 4:
-                if (GlobalValues.MoneyCount >= 290 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 290;
+                if (GlobalValues.ServerData.moneyCount >= 290 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 290;
                     GlobalValues.HealthPoints += 0.02;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -287,10 +287,10 @@ export class FoodManager extends Component {
     }
 
     onClickButton8() {
-        switch (GlobalValues.PlayerLevel) {
+        switch (GlobalValues.ServerData.playerLevel) {
             case 3:
-                if (GlobalValues.MoneyCount >= 1500 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 1500;
+                if (GlobalValues.ServerData.moneyCount >= 1500 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 1500;
                     GlobalValues.HealthPoints += 0.7;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -300,8 +300,8 @@ export class FoodManager extends Component {
                 break;
 
             case 4:
-                if (GlobalValues.MoneyCount >= 1500 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 1500;
+                if (GlobalValues.ServerData.moneyCount >= 1500 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 1500;
                     GlobalValues.HealthPoints += 0.07;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -313,10 +313,10 @@ export class FoodManager extends Component {
     }
 
     onClickButton9() {
-        switch (GlobalValues.PlayerLevel) {
+        switch (GlobalValues.ServerData.playerLevel) {
             case 3:
-                if (GlobalValues.MoneyCount >= 1800 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 1800;
+                if (GlobalValues.ServerData.moneyCount >= 1800 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 1800;
                     GlobalValues.HealthPoints += 0.8;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -326,8 +326,8 @@ export class FoodManager extends Component {
                 break;
 
             case 4:
-                if (GlobalValues.MoneyCount >= 1800 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 1800;
+                if (GlobalValues.ServerData.moneyCount >= 1800 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 1800;
                     GlobalValues.HealthPoints += 0.08;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -339,10 +339,10 @@ export class FoodManager extends Component {
     }
 
     onClickButton10() {
-        switch (GlobalValues.PlayerLevel) {
+        switch (GlobalValues.ServerData.playerLevel) {
             case 4:
-                if (GlobalValues.MoneyCount >= 800 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 800;
+                if (GlobalValues.ServerData.moneyCount >= 800 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 800;
                     GlobalValues.HealthPoints += 0.3;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -354,10 +354,10 @@ export class FoodManager extends Component {
     }
 
     onClickButton11() {
-        switch (GlobalValues.PlayerLevel) {
+        switch (GlobalValues.ServerData.playerLevel) {
             case 4:
-                if (GlobalValues.MoneyCount >= 1800 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 1800;
+                if (GlobalValues.ServerData.moneyCount >= 1800 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 1800;
                     GlobalValues.HealthPoints += 0.85;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {
@@ -369,10 +369,10 @@ export class FoodManager extends Component {
     }
 
     onClickButton12() {
-        switch (GlobalValues.PlayerLevel) {
+        switch (GlobalValues.ServerData.playerLevel) {
             case 4:
-                if (GlobalValues.MoneyCount >= 2200 && GlobalValues.HealthPoints != 1) {
-                    GlobalValues.MoneyCount -= 2200;
+                if (GlobalValues.ServerData.moneyCount >= 2200 && GlobalValues.HealthPoints != 1) {
+                    GlobalValues.ServerData.moneyCount -= 2200;
                     GlobalValues.HealthPoints += 0.95;
                     GlobalValues.BuySoundIsPlaying = true;
                     if (GlobalValues.HealthPoints >= 1) {

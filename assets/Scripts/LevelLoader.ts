@@ -18,7 +18,7 @@ export class LevelLoader extends Component {
     private Star_Icon_4: Sprite;
     
     protected update(): void {
-        switch (GlobalValues.PlayerLevel) {
+        switch (GlobalValues.ServerData.playerLevel) {
             case 1:
                 this.Star_Icon_1.grayscale = false;
                 this.Star_Icon_2.grayscale = true;

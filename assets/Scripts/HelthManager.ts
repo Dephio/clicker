@@ -17,7 +17,7 @@ export class HelthManager extends Component {
         const endValue = 0;
 
         if (GlobalValues.GameIsPaused == false && GlobalValues.GameIsOver == false) {
-            const increment = (startValue - endValue) / (GlobalValues.LifeTime * 60);
+            const increment = (startValue - endValue) / (GlobalValues.ServerData.lifeTime * 60);
             this.ProgressBar.progress = GlobalValues.HealthPoints;
             if (this.ProgressBar.progress > endValue) {
                 this.ProgressBar.progress -= increment;
@@ -25,7 +25,6 @@ export class HelthManager extends Component {
             }
             else {
                 GlobalValues.GameIsOver = true;
-                GlobalValues.AdvIsShow = false;
                 const MusicManager = find('Music_Manager');
                 MusicManager.getComponent(AudioSource).stop();
                 director.loadScene('End');

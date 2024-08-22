@@ -39,7 +39,7 @@ export class PlayerLoader extends Component {
     private Player_10: SpriteFrame;
 
     protected update(): void {
-        switch (GlobalValues.SkinNumber) {
+        switch (GlobalValues.ServerData.skinNumber) {
             case 1:
                 this.Player_Sprite.spriteFrame = this.Player_1;
                 break;

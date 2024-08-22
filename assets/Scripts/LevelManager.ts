@@ -6,122 +6,122 @@ const { ccclass } = _decorator;
 export class LevelManager extends Component {
 
     protected update(): void {
-        if (GlobalValues.MoneyCount >= 0 && GlobalValues.MoneyCount <= 999) {
-            if (GlobalValues.PlayerLevel > 1) {
+        if (GlobalValues.ServerData.moneyCount >= 0 && GlobalValues.ServerData.moneyCount <= 999) {
+            if (GlobalValues.ServerData.playerLevel > 1) {
                 GlobalValues.LevelUpdate = false;
                 GlobalValues.LevelIsReceived = false;
             }
             if (GlobalValues.LevelIsReceived == false) {
-                GlobalValues.PlayerLevel = 1;
-                GlobalValues.LifeTime = 30;
-                GlobalValues.MoneyForClick = 1;
+                GlobalValues.ServerData.playerLevel = 1;
+                GlobalValues.ServerData.lifeTime = 30;
+                GlobalValues.ServerData.moneyForClick = 1;
                 this.updateLevelValues();
                 GlobalValues.LevelIsReceived = true;
-                if (GlobalValues.SkinsIsSaved != true || GlobalValues.SkinNumber < 5) {
-                    GlobalValues.SkinNumber = 1;
+                if (GlobalValues.ServerData.skinsIsSaved != true || GlobalValues.ServerData.skinNumber < 5) {
+                    GlobalValues.ServerData.skinNumber = 1;
                 }
             }
         }
-        if (GlobalValues.MoneyCount >= 1000 && GlobalValues.MoneyCount <= 9999) {
-            if (GlobalValues.PlayerLevel < 2) {
+        if (GlobalValues.ServerData.moneyCount >= 1000 && GlobalValues.ServerData.moneyCount <= 9999) {
+            if (GlobalValues.ServerData.playerLevel < 2) {
                 GlobalValues.LevelUpdate = true;
                 GlobalValues.LevelIsReceived = false;
             }
-            if (GlobalValues.PlayerLevel > 2) {
+            if (GlobalValues.ServerData.playerLevel > 2) {
                 GlobalValues.LevelUpdate = false;
                 GlobalValues.LevelIsReceived = false;
             }
             if (GlobalValues.LevelIsReceived == false) {
-                GlobalValues.PlayerLevel = 2;
-                GlobalValues.LifeTime = 45;
-                GlobalValues.MoneyForClick = 2;
+                GlobalValues.ServerData.playerLevel = 2;
+                GlobalValues.ServerData.lifeTime = 45;
+                GlobalValues.ServerData.moneyForClick = 2;
                 this.updateLevelValues();
                 GlobalValues.LevelIsReceived = true;
-                if (GlobalValues.SkinsIsSaved != true || GlobalValues.SkinNumber < 5) {
-                    GlobalValues.SkinNumber = 2;
+                if (GlobalValues.ServerData.skinsIsSaved != true || GlobalValues.ServerData.skinNumber < 5) {
+                    GlobalValues.ServerData.skinNumber = 2;
                 }
             }
         }
-        if (GlobalValues.MoneyCount >= 10000 && GlobalValues.MoneyCount <= 99999) {
-            if (GlobalValues.PlayerLevel < 3) {
+        if (GlobalValues.ServerData.moneyCount >= 10000 && GlobalValues.ServerData.moneyCount <= 99999) {
+            if (GlobalValues.ServerData.playerLevel < 3) {
                 GlobalValues.LevelUpdate = true;
                 GlobalValues.LevelIsReceived = false;
             }
-            if (GlobalValues.PlayerLevel > 3) {
+            if (GlobalValues.ServerData.playerLevel > 3) {
                 GlobalValues.LevelUpdate = false;
                 GlobalValues.LevelIsReceived = false;
             }
             if (GlobalValues.LevelIsReceived == false) {
-                GlobalValues.PlayerLevel = 3;
-                GlobalValues.LifeTime = 60;
-                GlobalValues.MoneyForClick = 3;
+                GlobalValues.ServerData.playerLevel = 3;
+                GlobalValues.ServerData.lifeTime = 60;
+                GlobalValues.ServerData.moneyForClick = 3;
                 this.updateLevelValues();
                 GlobalValues.LevelIsReceived = true;
-                if (GlobalValues.SkinsIsSaved != true || GlobalValues.SkinNumber < 5) {
-                    GlobalValues.SkinNumber = 3;
+                if (GlobalValues.ServerData.skinsIsSaved != true || GlobalValues.ServerData.skinNumber < 5) {
+                    GlobalValues.ServerData.skinNumber = 3;
                 }
             }
         }
-        if (GlobalValues.MoneyCount >= 100000 && GlobalValues.MoneyCount <= 9999999) {
-            if (GlobalValues.PlayerLevel < 4) {
+        if (GlobalValues.ServerData.moneyCount >= 100000 && GlobalValues.ServerData.moneyCount <= 9999999) {
+            if (GlobalValues.ServerData.playerLevel < 4) {
                 GlobalValues.LevelUpdate = true;
                 GlobalValues.LevelIsReceived = false;
             }
             if (GlobalValues.LevelIsReceived == false) {
-                GlobalValues.PlayerLevel = 4;
-                GlobalValues.LifeTime = 75;
-                GlobalValues.MoneyForClick = 4;
+                GlobalValues.ServerData.playerLevel = 4;
+                GlobalValues.ServerData.lifeTime = 75;
+                GlobalValues.ServerData.moneyForClick = 4;
                 this.updateLevelValues();
                 GlobalValues.LevelIsReceived = true;
-                if (GlobalValues.SkinsIsSaved != true || GlobalValues.SkinNumber < 5) {
-                    GlobalValues.SkinNumber = 4;
+                if (GlobalValues.ServerData.skinsIsSaved != true || GlobalValues.ServerData.skinNumber < 5) {
+                    GlobalValues.ServerData.skinNumber = 4;
                 }
             }
         }
     }
 
     updateLevelValues() {
-        switch (GlobalValues.HealthLevel) {
+        switch (GlobalValues.ServerData.healthLevel) {
             case 0:
-                GlobalValues.LifeTime += 0;
+                GlobalValues.ServerData.lifeTime += 0;
                 break;
 
             case 1:
-                GlobalValues.LifeTime += 11.25;
+                GlobalValues.ServerData.lifeTime += 11.25;
                 break;
 
             case 2:
-                GlobalValues.LifeTime += 22.5;
+                GlobalValues.ServerData.lifeTime += 22.5;
                 break;
 
             case 3:
-                GlobalValues.LifeTime += 33.75;
+                GlobalValues.ServerData.lifeTime += 33.75;
                 break;
 
             case 4:
-                GlobalValues.LifeTime += 45;
+                GlobalValues.ServerData.lifeTime += 45;
                 break;
         }
 
-        switch (GlobalValues.MoneyLevel) {
+        switch (GlobalValues.ServerData.moneyLevel) {
             case 0:
-                GlobalValues.MoneyForClick += 0;
+                GlobalValues.ServerData.moneyForClick += 0;
                 break;
 
             case 1:
-                GlobalValues.MoneyForClick += 1;
+                GlobalValues.ServerData.moneyForClick += 1;
                 break;
 
             case 2:
-                GlobalValues.MoneyForClick += 2;
+                GlobalValues.ServerData.moneyForClick += 2;
                 break;
 
             case 3:
-                GlobalValues.MoneyForClick += 3;
+                GlobalValues.ServerData.moneyForClick += 3;
                 break;
 
             case 4:
-                GlobalValues.MoneyForClick += 4;
+                GlobalValues.ServerData.moneyForClick += 4;
                 break;
         }
     }

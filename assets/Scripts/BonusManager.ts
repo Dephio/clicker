@@ -45,6 +45,7 @@ export class BonusManager extends Component {
         if (GlobalValues.BonusIsSpawned == false) {
             GlobalValues.BonusNumber = Math.round(Math.random());
         }
+
         if (GlobalValues.BonusIsActivated == false) {
             switch (GlobalValues.BonusNumber) {
                 case 0:
@@ -62,45 +63,59 @@ export class BonusManager extends Component {
     }
 
     onClickMoneyBonus() {
-        const callbacks = {
-            onRewarded: this.getBonusMoney.bind(this),
-            onClose: () => {
-                GlobalValues.GameIsPaused = false;
-                if (GlobalValues.MusicIsActivated == true) {
-                    const MusicManager = find("Music_Manager");
-                    MusicManager.getComponent(AudioSource).play();
-                }
-            }
-        };
-
         GlobalValues.GameIsPaused = true;
         if (GlobalValues.MusicIsActivated == true) {
             const MusicManager = find("Music_Manager");
             MusicManager.getComponent(AudioSource).pause();
         }
 
-        ysdk.adv.showRewardedVideo({ callbacks });
+        ysdk.adv.showRewardedVideo({
+            callbacks: {
+                onRewarded: () => {
+                    this.getBonusMoney();
+                    console.log('Award received.');
+                },
+                onClose: () => {
+                    if (GlobalValues.MusicIsActivated == true) {
+                        const MusicManager = find("Music_Manager");
+                        MusicManager.getComponent(AudioSource).play();
+                    }
+                    GlobalValues.GameIsPaused = false;
+                    console.log('Video advertising closed.');
+                },
+                onError: (error) => {
+                    console.error(error);
+                }
+            }
+        });
     }
 
     onClickDiamondBonus() {
-        const callbacks = {
-            onRewarded: this.getBonusDiamond.bind(this),
-            onClose: () => {
-                GlobalValues.GameIsPaused = false;
-                if (GlobalValues.MusicIsActivated == true) {
-                    const MusicManager = find("Music_Manager");
-                    MusicManager.getComponent(AudioSource).play();
-                }
-            }
-        };
-
         GlobalValues.GameIsPaused = true;
         if (GlobalValues.MusicIsActivated == true) {
             const MusicManager = find("Music_Manager");
             MusicManager.getComponent(AudioSource).pause();
         }
-
-        ysdk.adv.showRewardedVideo({ callbacks });
+        
+        ysdk.adv.showRewardedVideo({
+            callbacks: {
+                onRewarded: () => {
+                    this.getBonusDiamond();
+                    console.log('Award received.');
+                },
+                onClose: () => {
+                    if (GlobalValues.MusicIsActivated == true) {
+                        const MusicManager = find("Music_Manager");
+                        MusicManager.getComponent(AudioSource).play();
+                    }
+                    GlobalValues.GameIsPaused = false;
+                    console.log('Video advertising closed.');
+                },
+                onError: (error) => {
+                    console.error(error);
+                }
+            }
+        });
     }
 
     getBonusMoney() {
@@ -109,11 +124,11 @@ export class BonusManager extends Component {
         GlobalValues.BonusIsSpawned = false;
         GlobalValues.BonusIsActivated = true;
 
-        if (GlobalValues.MoneyCount <= 9999499) {
-            GlobalValues.MoneyCount += 500;
+        if (GlobalValues.ServerData.moneyCount <= 9999499) {
+            GlobalValues.ServerData.moneyCount += 500;
         }
         else {
-            GlobalValues.MoneyCount = 9999999;
+            GlobalValues.ServerData.moneyCount = 9999999;
         }
     }
 
@@ -123,11 +138,11 @@ export class BonusManager extends Component {
         GlobalValues.BonusIsSpawned = false;
         GlobalValues.BonusIsActivated = true;
 
-        if (GlobalValues.DiamondCount <= 99998) {
-            GlobalValues.DiamondCount += 1;
+        if (GlobalValues.ServerData.diamondCount <= 99998) {
+            GlobalValues.ServerData.diamondCount += 1;
         }
         else {
-            GlobalValues.DiamondCount = 99999;
+            GlobalValues.ServerData.diamondCount = 99999;
         }
     }
 }
