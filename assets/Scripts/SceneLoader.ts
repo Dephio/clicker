@@ -30,12 +30,6 @@ export class SceneLoader extends Component {
             });
             
             YaGames.init().then((ysdk) => {
-                if (GlobalValues.ServerData.gameLanguage == "ru") {
-                    l10n.changeLanguage("ru");
-                }
-                if (GlobalValues.ServerData.gameLanguage == "en") {
-                    l10n.changeLanguage("en");
-                }
                 ysdk.features.LoadingAPI?.ready();
             }).catch(console.error);
 

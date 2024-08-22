@@ -31,7 +31,6 @@ export class GlobalValues extends Component {
         skinNumber: 1,
         moneyCount: 0,
         diamondCount: 0,
-        gameLanguage: "ru",
         skinsIsSaved: false,
         firstSkinIsActivated: true,
         secondSkinIsActivated: false,

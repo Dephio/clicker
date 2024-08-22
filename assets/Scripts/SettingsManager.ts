@@ -95,7 +95,6 @@ export class SettingsManager extends Component {
     }
 
     onLoadEnglishSettings() {
-        GlobalValues.ServerData.gameLanguage = l10n.currentLanguage;
         this.LanguageButton.spriteFrame = this.LanguageEN;
         this.InfoEN.active = true;
         this.InfoRU.active = false;
@@ -107,7 +106,6 @@ export class SettingsManager extends Component {
     }
 
     onLoadRussianSettings() {
-        GlobalValues.ServerData.gameLanguage = l10n.currentLanguage;
         this.LanguageButton.spriteFrame = this.LanguageRU;
         this.InfoEN.active = false;
         this.InfoRU.active = true;
