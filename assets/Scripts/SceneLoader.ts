@@ -1,6 +1,5 @@
 import { _decorator, director, Component } from 'cc';
 import { GlobalValues } from './GlobalValues';
-import { l10n } from '../../extensions/Yandex Games SDK/static/assets/ysdk';
 import { ysdk } from '../../extensions/Yandex Games SDK/static/assets/ysdk';
 import { YandexGames } from 'ysdk';
 const { ccclass } = _decorator;
@@ -49,8 +48,13 @@ export class SceneLoader extends Component {
         ysdk.getPlayer({ scopes: false }).then(_player => {
             player = _player;
             const sentData = GlobalValues.ServerData;
+            if (JSON.stringify(sentData) === JSON.stringify(GlobalValues.LastSentData)) {
+                console.log('The data has not changed, the sending was cancelled.');
+                return;
+            }
             player.setData<object>(sentData, true).then(() => {
                 console.log('Data sent.');
+                GlobalValues.LastSentData = sentData;
             }).catch(console.error);
         }).catch(err => {
             console.error(err);
@@ -58,6 +62,12 @@ export class SceneLoader extends Component {
     }
 
     getDataFromServer() {
+        const isFirstVisit = localStorage.getItem('isFirstVisit');
+        if (!isFirstVisit) {
+            console.log('The first time you enter the game, the data will not be loaded.');
+            localStorage.setItem('isFirstVisit', 'true');
+            return;
+        }
         var player: YandexGames.Player;
         ysdk.getPlayer({ scopes: false }).then(_player => {
             player = _player;

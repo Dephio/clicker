@@ -21,6 +21,7 @@ export class GlobalValues extends Component {
     static BonusIsActivated: boolean = false;
     static BuySoundIsPlaying: boolean = false;
     static GameIsStartFirstTime: boolean = true;
+    static LastSentData: object | null = null;
 
     static ServerData = {
         lifeTime: 30,
