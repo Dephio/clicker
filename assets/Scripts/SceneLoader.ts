@@ -80,7 +80,7 @@ export class SceneLoader extends Component {
     onShowAdvertising() {
         return new Promise<void>((resolve) => {
             GlobalValues.GameIsPaused = true;
-            if (GlobalValues.MusicIsActivated == true) {
+            if (GlobalValues.MusicIsActivated == true && GlobalValues.MusicIsPlaying == true) {
                 const MusicManager = find("Music_Manager");
                 MusicManager.getComponent(AudioSource).pause();
             }
@@ -90,7 +90,7 @@ export class SceneLoader extends Component {
                     onClose: () => {
                         GlobalValues.AdvIsShow = true;
                         this.onReloadAdvertising();
-                        if (GlobalValues.MusicIsActivated == true) {
+                        if (GlobalValues.MusicIsActivated == true && GlobalValues.MusicIsPlaying == true) {
                             const MusicManager = find("Music_Manager");
                             MusicManager.getComponent(AudioSource).play();
                         }
