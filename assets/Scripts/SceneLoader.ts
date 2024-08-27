@@ -1,4 +1,4 @@
-import { _decorator, director, Component } from 'cc';
+import { _decorator, director, find, Component, AudioSource } from 'cc';
 import { GlobalValues } from './GlobalValues';
 import { ysdk } from '../../extensions/Yandex Games SDK/static/assets/ysdk';
 import { YandexGames } from 'ysdk';
@@ -80,15 +80,22 @@ export class SceneLoader extends Component {
     onShowAdvertising() {
         return new Promise<void>((resolve) => {
             GlobalValues.GameIsPaused = true;
+            if (GlobalValues.MusicIsActivated == true) {
+                const MusicManager = find("Music_Manager");
+                MusicManager.getComponent(AudioSource).pause();
+            }
+
             ysdk.adv.showFullscreenAdv({
                 callbacks: {
-                    onClose: (wasShown) => {
-                        if (wasShown) {
-                            GlobalValues.AdvIsShow = true;
-                            this.onReloadAdvertising();
-                            GlobalValues.GameIsPaused = false;
-                            console.log('Video advertising closed.');
+                    onClose: () => {
+                        GlobalValues.AdvIsShow = true;
+                        this.onReloadAdvertising();
+                        if (GlobalValues.MusicIsActivated == true) {
+                            const MusicManager = find("Music_Manager");
+                            MusicManager.getComponent(AudioSource).play();
                         }
+                        GlobalValues.GameIsPaused = false;
+                        console.log('Video advertising closed.');
                         resolve();
                     },
                     onError: (error) => {
