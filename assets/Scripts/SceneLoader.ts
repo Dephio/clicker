@@ -43,7 +43,7 @@ export class SceneLoader extends Component {
         }, 20000); 
     }
 
-    sendDataToServer() {
+    sendDataToServer() { //Добавить обработку ошибки, связанную с отправкой одних и тех же данных
         var player: YandexGames.Player;
         ysdk.getPlayer({ scopes: false }).then(_player => {
             player = _player;
